@@ -1,11 +1,14 @@
 footer {
-    padding: 10px 15px;
-    .footer {
-        justify-content: space-between;
+    color: #c7c7c7;
+    &>div {
+        padding: 10px 15px;
+    }
+    .footer-top {
+        border-bottom: 1px solid #c7c7c7;
     }
     .logo {
         width: 150px;
-        max-height: 35px;
+        max-height: 25px;
     }
     .social {
         li {
@@ -13,5 +16,28 @@ footer {
             width: 35px;
             margin: 0 5px;
         }
+    }
+    .contact {
+        p {
+            display: inline-block;
+        }
+    }
+    .footer-nav {
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            a {
+                color: #c7c7c7;
+                &:hover,
+                &:visited {
+                    color: rgba(#c7c7c7, .7);
+                }
+            }
+        }
+    }
+    .copyright {
+        text-align: center;
+        background-color: #000000;
+        color: #808080;
     }
 }
