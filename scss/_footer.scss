@@ -1,0 +1,17 @@
+footer {
+    padding: 10px 15px;
+    .footer {
+        justify-content: space-between;
+    }
+    .logo {
+        width: 150px;
+        max-height: 35px;
+    }
+    .social {
+        li {
+            display: inline-block;
+            width: 35px;
+            margin: 0 5px;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+// 首頁header
+header {
+    background-color: rgba(#fff, .7);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        &>div {
+            padding: 10px 15px;
+            align-self: stretch;
+        }
+    }
+    .logo {
+        background-color: rgba(#fff, .5);
+        img {
+            width: 150px;
+            max-height: 25px;
+        }
+    }
+    .menu {
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+    .icon-btns {
+        height: 30px;
+        vertical-align: middle;
+        background-color: rgba(#fff, .5);
+        li {
+            display: inline-block;
+            padding: 0 10px;
+            &:nth-child(2) {
+                border-left: 1px solid $maincolor;
+                border-right: 1px solid $maincolor;
+            }
+        }
+        img {
+            width: 25px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .cart-num {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            padding: 3px;
+            font-size: .9rem;
+            color: #fff;
+            text-align: center;
+            background-color: #C0281B;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+    }
+}

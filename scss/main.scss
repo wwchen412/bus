@@ -1,0 +1,77 @@
+@import '_mixin.scss';
+@import '_color.scss';
+@import '_header.scss'; // header共用
+@import '_index.scss'; // 首頁
+@import '_footer.scss'; //footer 共用
+* {
+    // outline: 1px solid #f00;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+body {}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:visited {
+        color: rgba(#000, .8);
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bus-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.bus-8 {
+    flex: 0 0 66.666666%;
+    max-width: 66.666666%;
+}
+
+.bus-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.img-fluid {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// heroimg
+#hero-img {
+    img {
+        display: block;
+        width: 100%;
+    }
+    margin-bottom: 40px;
+}

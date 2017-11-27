@@ -1,0 +1,191 @@
+// 精選商品
+#Commodity {
+    .commodity-block {
+        position: relative;
+        height: 100%;
+        .commodity-title {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h2 {
+            padding: 0 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #fff;
+        }
+        img {
+            height: 100%;
+        }
+    }
+    .commodity-list {
+        .bus-4 {
+            &>* {
+                width: 100%;
+                height: 0;
+                padding-top: 100%;
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            %img-tran {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                transform: translate(-50%, 0);
+                left: 50%;
+            }
+            &:nth-child(odd) {
+                .img-wrap:before {
+                    @extend %img-tran;
+                    border-width: 30px 25px 0 25px;
+                    border-color: #ffffff transparent transparent transparent;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+            &:nth-child(even) {
+                .img-wrap:before {
+                    @extend %img-tran;
+                    border-width: 0px 25px 30px 25px;
+                    border-color: transparent transparent #fffffftransparent;
+                    bottom: 0;
+                    z-index: 1;
+                }
+            }
+        }
+        .commodity-list-block {
+            position: relative;
+            &>* {
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                padding: 15px;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+            }
+            .commodity-list-blockinner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h3 {
+                    padding: 0 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #000;
+                }
+                h2 {
+                    padding: 10px 0;
+                    color: #f00;
+                }
+            }
+        }
+    }
+    .slider-dots {
+        padding: 15px 0;
+        ul {
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #79ACC1;
+            margin: 0 5px;
+        }
+    }
+}
+
+// 小banner
+.small-banner {
+    ul {
+        display: flex;
+        li {
+            display: inline-block;
+            width: calc(100% / 4);
+            font-size: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.brand {
+    .brand-select {
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #458ac2;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        height: 100%;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0 25px 30px;
+            border-color: transparent transparent transparent #458ac2;
+            right: -30px;
+            top: calc(50% - 25px);
+            z-index: 1;
+        }
+        h2 {
+            display: inline-block;
+            padding: 0 15px 10px;
+            border-bottom: 1px solid #fff;
+        }
+        h3 {
+            padding-top: 10px;
+        }
+        .bus-4 {
+            padding: 0 5px 10px;
+            box-sizing: border-box;
+        }
+    }
+    .dots {
+        text-align: center;
+        li {
+            display: inline-block;
+            width: 7.5px;
+            height: 7.5px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #fff;
+        }
+    }
+    .brand-items {
+        height: 100%;
+        li {
+            position: relative;
+            height: 50%;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
