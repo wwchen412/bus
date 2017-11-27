@@ -59,7 +59,7 @@
                 .img-wrap:before {
                     @extend %img-tran;
                     border-width: 0px 25px 30px 25px;
-                    border-color: transparent transparent #fffffftransparent;
+                    border-color: transparent transparent #ffffff transparent;
                     bottom: 0;
                     z-index: 1;
                 }
@@ -111,7 +111,8 @@
 }
 
 // 小banner
-.small-banner {
+.small-banner,
+.bottom-banner {
     ul {
         display: flex;
         li {
@@ -122,6 +123,17 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+    }
+}
+
+.bottom-banner {
+    ul {
+        flex-wrap: wrap;
+        li {
+            @include range-width(300px, 768px) {
+                width: calc(100% / 2);
             }
         }
     }
@@ -147,6 +159,13 @@
             right: -30px;
             top: calc(50% - 25px);
             z-index: 1;
+            @include range-width(300px, 768px) {
+                top: auto;
+                bottom: -30px;
+                right: calc(50% - 25px);
+                border-width: 30px 25px 0 25px;
+                border-color: #458ac2 transparent transparent transparent;
+            }
         }
         h2 {
             display: inline-block;
@@ -174,6 +193,9 @@
     }
     .brand-items {
         height: 100%;
+        @include range-width(300px, 768px) {
+            height: 30vh;
+        }
         li {
             position: relative;
             height: 50%;

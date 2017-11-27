@@ -1,4 +1,4 @@
-// 首頁header
+@import '_mixin.scss'; // 首頁header
 header {
     background-color: rgba(#fff, .7);
     height: 50px;
@@ -7,6 +7,9 @@ header {
     left: 0;
     z-index: 90;
     width: 100%;
+    @include range-width(300px, 768px) {
+        height: auto;
+    }
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -19,27 +22,50 @@ header {
     }
     .logo {
         background-color: rgba(#fff, .5);
+        @include range-width(300px, 768px) {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(#fff, 1);
+        }
         img {
             width: 150px;
             max-height: 25px;
         }
     }
     .menu {
+        // @include range-width(300px, 768px) {
+        //     width: 100%;
+        //     text-align: center;
+        // }
         li {
             display: inline-block;
             margin: 0 10px;
+        }
+        @include range-width(300px, 768px) {
+            order: 2;
+            text-align: center;
+            width: 100%;
         }
     }
     .icon-btns {
         height: 30px;
         vertical-align: middle;
         background-color: rgba(#fff, .5);
+        @include range-width(300px, 768px) {
+            order: 1;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(#fff, 1);
+        }
         li {
             display: inline-block;
             padding: 0 10px;
             &:nth-child(2) {
                 border-left: 1px solid $maincolor;
                 border-right: 1px solid $maincolor;
+                @include range-width(300px, 768px) {
+                    border: none;
+                }
             }
         }
         img {

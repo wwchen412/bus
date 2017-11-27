@@ -6,6 +6,9 @@ header {
   left: 0;
   z-index: 90;
   width: 100%; }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    header {
+      height: auto; } }
   header nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -29,22 +32,47 @@ header {
       align-self: stretch; }
   header .logo {
     background-color: rgba(255, 255, 255, 0.5); }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      header .logo {
+        width: 100%;
+        text-align: center;
+        background-color: white; } }
     header .logo img {
       width: 150px;
       max-height: 25px; }
   header .menu li {
     display: inline-block;
     margin: 0 10px; }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    header .menu {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
+      text-align: center;
+      width: 100%; } }
   header .icon-btns {
     height: 30px;
     vertical-align: middle;
     background-color: rgba(255, 255, 255, 0.5); }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      header .icon-btns {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 100%;
+        text-align: center;
+        background-color: white; } }
     header .icon-btns li {
       display: inline-block;
       padding: 0 10px; }
       header .icon-btns li:nth-child(2) {
         border-left: 1px solid #595757;
         border-right: 1px solid #595757; }
+        @media screen and (max-width: 768px) and (min-width: 300px) {
+          header .icon-btns li:nth-child(2) {
+            border: none; } }
     header .icon-btns img {
       width: 25px;
       display: inline-block;
@@ -157,20 +185,31 @@ header {
     background-color: #79ACC1;
     margin: 0 5px; }
 
-.small-banner ul {
+.small-banner ul,
+.bottom-banner ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .small-banner ul li {
+  .small-banner ul li,
+  .bottom-banner ul li {
     display: inline-block;
     width: calc(100% / 4);
     font-size: 0; }
-    .small-banner ul li img {
+    .small-banner ul li img,
+    .bottom-banner ul li img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover; }
+
+.bottom-banner ul {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    .bottom-banner ul li {
+      width: calc(100% / 2); } }
 
 .brand .brand-select {
   padding: 15px;
@@ -192,6 +231,13 @@ header {
     right: -30px;
     top: calc(50% - 25px);
     z-index: 1; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .brand .brand-select:before {
+        top: auto;
+        bottom: -30px;
+        right: calc(50% - 25px);
+        border-width: 30px 25px 0 25px;
+        border-color: #458ac2 transparent transparent transparent; } }
   .brand .brand-select h2 {
     display: inline-block;
     padding: 0 15px 10px;
@@ -215,6 +261,9 @@ header {
 
 .brand .brand-items {
   height: 100%; }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    .brand .brand-items {
+      height: 30vh; } }
   .brand .brand-items li {
     position: relative;
     height: 50%;
@@ -298,6 +347,30 @@ a {
   flex: 0 0 33.333333%;
   max-width: 33.333333%; }
 
+@media screen and (max-width: 768px) and (min-width: 300px) {
+  .bus-sm-12 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+
+@media screen and (max-width: 768px) and (min-width: 300px) {
+  .bus-sm-6 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; } }
+
+@media screen and (max-width: 768px) and (min-width: 300px) {
+  .d-sm-none {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) {
+  .d-md-none {
+    display: none !important; } }
+
 .mb {
   margin-bottom: 1rem; }
 
@@ -332,3 +405,7 @@ a {
   #hero-img img {
     display: block;
     width: 100%; }
+
+@media screen and (max-width: 768px) and (min-width: 300px) {
+  #wrap {
+    margin-top: 100px; } }

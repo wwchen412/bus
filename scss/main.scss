@@ -12,8 +12,6 @@
     font-weight: 400;
 }
 
-body {}
-
 a {
     color: #000000;
     text-decoration: none;
@@ -42,6 +40,32 @@ a {
 .bus-4 {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
+}
+
+.bus-sm-12 {
+    @include range-width(300px, 768px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.bus-sm-6 {
+    @include range-width(300px, 768px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.d-sm-none {
+    @include range-width(300px, 768px) {
+        display: none !important;
+    }
+}
+
+.d-md-none {
+    @include range-width(768px, 0) {
+        display: none !important;
+    }
 }
 
 .mb {
@@ -78,4 +102,10 @@ a {
         width: 100%;
     }
     margin-bottom: 40px;
+}
+
+#wrap {
+    @include range-width(300px, 768px) {
+        margin-top: 100px;
+    }
 }
