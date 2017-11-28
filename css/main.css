@@ -349,6 +349,46 @@ footer {
     background-color: #000000;
     color: #808080; }
 
+/* ---- grid ---- */
+.grid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .grid > * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* ---- .element-item ---- */
+/* 5 columns, percentage width */
+.grid-item,
+.grid-sizer {
+  width: 20%; }
+
+.grid-item {
+  float: left;
+  border: 2px solid #fff;
+  position: relative;
+  padding-bottom: 20%; }
+  .grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.grid-item--width2 {
+  width: 40%; }
+
+.grid-item--height2 {
+  padding-bottom: calc(40% + 4px); }
+
 * {
   padding: 0;
   margin: 0;
