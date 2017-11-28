@@ -16,6 +16,13 @@ footer {
             display: inline-block;
             width: 35px;
             margin: 0 5px;
+            position: relative;
+            &:hover .tip {
+                display: inline-block;
+            }
+            .tip:before {
+                margin-top: 5px;
+            }
         }
     }
     .contact {

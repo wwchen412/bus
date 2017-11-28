@@ -60,12 +60,16 @@ header {
         li {
             display: inline-block;
             padding: 0 10px;
+            position: relative;
             &:nth-child(2) {
                 border-left: 1px solid $maincolor;
                 border-right: 1px solid $maincolor;
                 @include range-width(300px, 768px) {
                     border: none;
                 }
+            }
+            &:hover .tip {
+                display: inline-block;
             }
         }
         img {
@@ -85,5 +89,42 @@ header {
             vertical-align: middle;
             border-radius: 50%;
         }
+    }
+}
+
+.tip {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    left: -50px;
+    top: -2px;
+    background-color: rgba(#fff, 1);
+    border: 1px solid #808080;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    word-break: keep-all;
+    &:before {
+        content: "";
+        border-width: 5px;
+        position: absolute;
+        display: block;
+        border-color: transparent;
+        border-style: solid;
+        right: -6px;
+        border-left-color: #808080;
+        margin-top: 7px;
+        border-right-width: 0;
+    }
+    &:after {
+        content: "";
+        border-width: 5px;
+        position: absolute;
+        display: block;
+        border-color: transparent;
+        border-style: solid;
+        right: -5px;
+        border-left-color: #fff;
+        margin-top: -15px;
+        border-right-width: 0;
     }
 }

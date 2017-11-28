@@ -66,13 +66,16 @@ header {
         background-color: white; } }
     header .icon-btns li {
       display: inline-block;
-      padding: 0 10px; }
+      padding: 0 10px;
+      position: relative; }
       header .icon-btns li:nth-child(2) {
         border-left: 1px solid #595757;
         border-right: 1px solid #595757; }
         @media screen and (max-width: 768px) and (min-width: 300px) {
           header .icon-btns li:nth-child(2) {
             border: none; } }
+      header .icon-btns li:hover .tip {
+        display: inline-block; }
     header .icon-btns img {
       width: 25px;
       display: inline-block;
@@ -88,6 +91,42 @@ header {
       background-color: #C0281B;
       vertical-align: middle;
       border-radius: 50%; }
+
+.tip {
+  display: none;
+  position: absolute;
+  padding: 5px 10px;
+  left: -50px;
+  top: -2px;
+  background-color: white;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  word-break: keep-all; }
+  .tip:before {
+    content: "";
+    border-width: 5px;
+    position: absolute;
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    right: -6px;
+    border-left-color: #808080;
+    margin-top: 7px;
+    border-right-width: 0; }
+  .tip:after {
+    content: "";
+    border-width: 5px;
+    position: absolute;
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    right: -5px;
+    border-left-color: #fff;
+    margin-top: -15px;
+    border-right-width: 0; }
 
 #Commodity .commodity-block {
   position: relative;
@@ -290,7 +329,12 @@ footer {
   footer .social li {
     display: inline-block;
     width: 35px;
-    margin: 0 5px; }
+    margin: 0 5px;
+    position: relative; }
+    footer .social li:hover .tip {
+      display: inline-block; }
+    footer .social li .tip:before {
+      margin-top: 5px; }
   footer .contact p {
     display: inline-block; }
   footer .footer-nav li {
