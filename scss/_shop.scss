@@ -1,0 +1,92 @@
+.breadcrumb-trail {
+    padding: 30px 0 15px;
+}
+
+.bus-pr-20 {
+    @include range-width(769px, 0) {
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.shop-info {
+    padding: 20px 0;
+}
+
+.num {
+    align-self: flex-end;
+    &>* {
+        height: 40px;
+        user-select: none;
+        font-size: 1rem;
+    }
+    .input-number {
+        padding: 0 5px;
+        vertical-align: top;
+        text-align: center;
+        outline: none;
+        border: 0;
+        pointer-events: none;
+        width: 40px;
+        @include custom_select;
+    }
+    .input-number-decrement,
+    .input-number-increment {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 40px;
+        line-height: 38px;
+        border: 1px solid $bordercolor;
+        color: #444;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 4px;
+        &:active {
+            background: #ddd;
+        }
+    }
+}
+
+.cart-btns {
+    font-size: 0;
+    margin: 15px 0;
+    button {
+        font-size: 1rem;
+        @include custom_select;
+        display: inline-block;
+        width: calc(50% - 15px / 2);
+        padding: 15px 20px;
+        background: linear-gradient(to bottom, $red, #BC271A);
+        color: #fff;
+        ;
+        border-radius: 4px;
+        box-sizing: border-box;
+        &:nth-child(2) {
+            margin-left: 14px;
+            background: linear-gradient(to bottom, #F09637, #EC5729);
+        }
+    }
+}
+
+// 最新優惠
+.sales {
+    ul {
+        margin: 20px 0;
+    }
+    li {
+        margin: 5px 0;
+    }
+    h3 {
+        padding: 26px 0 15px;
+    }
+}
+
+// 商品圖文編輯器
+.shop-textBlock {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

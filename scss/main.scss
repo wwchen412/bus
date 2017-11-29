@@ -4,6 +4,7 @@
 @import '_index.scss'; // 首頁
 @import '_footer.scss'; //footer 共用
 @import '_grid.scss'; //masonry style gird
+@import '_shop.scss';
 * {
     // outline: 1px solid #f00;
     padding: 0;
@@ -23,14 +24,28 @@ a {
     }
 }
 
+b {
+    font-weight: bold;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
+.bus-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
 .bus-6 {
     flex: 0 0 50%;
     max-width: 50%;
+}
+
+.bus-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 
 .bus-8 {
@@ -39,14 +54,33 @@ a {
 }
 
 .bus-4 {
-    flex: 0 0 33.333333%;
+    flex: 0 0 33.3333333%;
     max-width: 33.333333%;
+}
+
+.bus-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 
 .bus-sm-12 {
     @include range-width(300px, 768px) {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+.bus-sm-px {
+    @include range-width(300px, 768px) {
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+}
+
+.bus-sm-4 {
+    @include range-width(300px, 768px) {
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
@@ -63,6 +97,13 @@ a {
     }
 }
 
+.bus-xs-6 {
+    @include range-width(300px, 576px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 .d-md-none {
     @include range-width(768px, 0) {
         display: none !important;
@@ -75,6 +116,16 @@ a {
 
 .mb-40 {
     margin-bottom: 40px;
+}
+
+.py-1 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.py {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .img-fluid {
@@ -96,6 +147,10 @@ a {
     justify-content: space-between;
 }
 
+.flex-cloumn {
+    flex-direction: column;
+}
+
 // heroimg
 #hero-img {
     img {
@@ -115,4 +170,12 @@ a {
     @include range-width(300px, 768px) {
         margin-top: 100px;
     }
+}
+
+.border-bottom {
+    border-bottom: 1px solid $bordercolor;
+}
+
+.line-height-180 {
+    line-height: 180%;
 }
