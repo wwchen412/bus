@@ -90,3 +90,11 @@
         height: auto;
     }
 }
+
+// 商品列表
+.shop-itemsList {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
