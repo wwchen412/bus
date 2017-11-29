@@ -12,7 +12,11 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="../Content/img/logo.svg" alt=""></div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../Content/img/logo.svg" alt="">
+                </a>
+            </div>
             <!-- 最多新增到四個 -->
             <div class="menu">
                 <ul>
@@ -51,52 +55,9 @@
     </header>
 
 
-    <div id="wrap" style="margin-top:60px;">
+    <div id="wrap">
         <div class="container-fluid" style="padding:0 15px;">
-            <!-- <div class="grid">
-                <div class="gutter-sizer"></div>
-                <div class="grid-item grid-item--width2 grid-item--height2">
-                    <img src="../Content/img/brand.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="../Content/img/brand_1.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_2.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_3.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_4.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_5.png" alt="">
-                </div>
-                <div class="grid-item grid-item--width2 grid-item--height2">
-                    <img src="../Content/img/brand_6.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_7.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_8.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_9.png" alt=""></div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_10.png" alt="">
-                </div>
-                <div class="grid-item ">
-                    <img src="../Content/img/brand_11.png" alt="">
-                </div>
-                <div class="grid-item">
-                    <img src="../Content/img/brand_12.png" alt="">
-                </div>
 
-
-
-            </div> -->
             <div class="grid">
                 <div class="grid-sizer"></div>
                 <div class="grid-item grid-item--width2 grid-item--height2">
@@ -212,7 +173,8 @@
         $('.grid').isotope({
             layoutMode: 'packery',
             packery: {
-                columnWidth: '.grid-sizer'
+                columnWidth: '.grid-sizer',
+                gutter: 2
             },
             itemSelector: '.grid-item',
             percentPosition: true

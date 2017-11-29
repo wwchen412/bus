@@ -106,6 +106,12 @@ a {
 }
 
 #wrap {
+    &.index {
+        @include range-width(769px, 0) {
+            margin-top: 0;
+        }
+    }
+    margin-top: 50px;
     @include range-width(300px, 768px) {
         margin-top: 100px;
     }
