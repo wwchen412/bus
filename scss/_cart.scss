@@ -1,0 +1,202 @@
+// 購物車清單
+.cart-table {
+    margin: 15px 0;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        // border: 1px solid $bordercolor;
+        th {
+            background-color: #F2F2F2;
+        }
+        th,
+        td {
+            padding: 20px;
+            border: 2px solid $lightborder;
+            &.img {
+                padding: 0;
+            }
+            @include range-width(300px, 768px) {
+                padding: 10px;
+            }
+        }
+        .cancel {
+            display: inline-block;
+            color: #fff;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .img-wrap {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .num {
+            .input-number-decrement,
+            .input-number-increment,
+            input {
+                width: 30px;
+                height: 30px;
+                line-height: 28px;
+            }
+            input {
+                appearance: none;
+                @include range-width(300px, 576px) {
+                    border: 1px solid $maincolor;
+                    border-radius: 4px;
+                    pointer-events: all;
+                }
+            }
+            // 拿掉預設上下扭
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// 購物車價錢
+.cart-price {
+    text-align: right;
+    .cart-price-block {
+        display: inline-block;
+        li {
+            border-bottom: 2px solid $lightborder;
+            &>div {
+                padding: 10px;
+                display: inline-block;
+                text-align: left;
+                min-width: 100px;
+                &:nth-child(2) {
+                    min-width: 150px;
+                }
+            }
+            .title {
+                background-color: #F2F2F2;
+            }
+        }
+        .btn {
+            width: 100%;
+            margin: 15px 0;
+        }
+    }
+}
+
+// 結帳頁
+.shipping-block {
+    padding: 15px 0;
+    &>.row {
+        margin: 0 -15px;
+        &>.bus-6 {
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+    h3 {
+        padding: 10px 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        @include custom_select;
+        background-color: #fff;
+        font-size: 1rem;
+        padding: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+        border: 1px solid $bordercolor;
+        border-radius: 4px;
+    }
+    select {
+        appearance: list;
+    }
+    .input-group {
+        margin: 5px 0;
+    }
+    .bus-4+.bus-8 {
+        max-width: calc(66.666666% - 10px);
+        margin-left: 10px;
+    }
+    .bus-4+.bus-4 {
+        max-width: calc(33.33333% - 10px);
+        margin-left: 10px;
+    }
+    .label-block {
+        margin: 5px 0;
+        display: inline-block;
+        padding: 30px 20px;
+        background-color: $lightborder;
+        width: calc(100% - 70px);
+        margin-left: 10px;
+        text-align: center;
+        border-radius: 4px;
+    }
+}
+
+.detail-form {
+    text-align: center;
+    color: #fff;
+    ul {
+        border: 3px solid $lightborder;
+    }
+    li {
+        border: 3px solid $lightborder;
+        .df-brand {
+            background-color: $bordercolor;
+            padding: 20px 10px;
+        }
+        .df-title {
+            background-color: #F2F2F2;
+            &>div {
+                border: 1px solid $lightborder;
+                padding: 20px 10px;
+                color: #000;
+            }
+            .item-name {
+                flex: 2 1 60px;
+            }
+            .item-price {
+                flex: 1 1 40px;
+            }
+        }
+        .df-content {
+            &>div {
+                border: 1px solid $lightborder;
+                padding: 20px 10px;
+                color: #000;
+            }
+            .item-name {
+                text-align: left;
+                flex: 2 1 60px;
+            }
+            .item-price {
+                flex: 1 1 40px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.btn-block {
+    min-width: 300px;
+    display: block;
+    margin: 15px auto;
+    @include range-width(300px, 576px) {
+        width: 100%;
+    }
+}

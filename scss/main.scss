@@ -5,6 +5,7 @@
 @import '_footer.scss'; //footer 共用
 @import '_grid.scss'; //masonry style gird
 @import '_shop.scss';
+@import '_cart.scss';
 * {
     // outline: 1px solid #f00;
     padding: 0;
@@ -97,6 +98,12 @@ b {
     }
 }
 
+.d-xs-none {
+    @include range-width(300px, 576px) {
+        display: none !important;
+    }
+}
+
 .bus-xs-6 {
     @include range-width(300px, 576px) {
         flex: 0 0 50%;
@@ -167,6 +174,7 @@ b {
         }
     }
     margin-top: 50px;
+    min-height: calc(100vh - 205px);
     @include range-width(300px, 768px) {
         margin-top: 100px;
     }
@@ -178,4 +186,8 @@ b {
 
 .line-height-180 {
     line-height: 180%;
+}
+
+.text-center {
+    text-align: center;
 }
