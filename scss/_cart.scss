@@ -111,7 +111,8 @@
     input[type="email"],
     input[type="tel"],
     input[type="password"],
-    select {
+    select,
+    textarea {
         @include custom_select;
         background-color: #fff;
         font-size: 1rem;

@@ -24,7 +24,9 @@
                 width: 150px;
                 padding: 10px;
                 box-sizing: border-box;
-                &+input {
+                &+input,
+                &+textarea {
+                    vertical-align: top;
                     width: calc(100% - 151px);
                 }
             }

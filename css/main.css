@@ -690,7 +690,8 @@ footer {
   .shipping-block input[type="email"],
   .shipping-block input[type="tel"],
   .shipping-block input[type="password"],
-  .shipping-block select {
+  .shipping-block select,
+  .shipping-block textarea {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -708,7 +709,8 @@ footer {
     .shipping-block input[type="email"]:focus,
     .shipping-block input[type="tel"]:focus,
     .shipping-block input[type="password"]:focus,
-    .shipping-block select:focus {
+    .shipping-block select:focus,
+    .shipping-block textarea:focus {
       outline-offset: 0; }
   .shipping-block select {
     -webkit-appearance: list;
@@ -812,7 +814,9 @@ footer {
     padding: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-    .member-form .input-group label p + input {
+    .member-form .input-group label p + input,
+    .member-form .input-group label p + textarea {
+      vertical-align: top;
       width: calc(100% - 151px); }
 
 .member-form .input-group select {
