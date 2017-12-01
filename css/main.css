@@ -792,6 +792,17 @@ footer {
     .btn-block {
       width: 100%; } }
 
+.member-nav {
+  margin: 0 15px;
+  border-bottom: 1px solid #c7c7c7; }
+  .member-nav li {
+    display: inline-block;
+    padding: 10px 20px; }
+    .member-nav li a {
+      color: #c7c7c7; }
+      .member-nav li a.active, .member-nav li a:hover {
+        color: #595757; }
+
 .member-form .input-group label {
   font-size: 0; }
   .member-form .input-group label p {

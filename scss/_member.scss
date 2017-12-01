@@ -1,3 +1,19 @@
+.member-nav {
+    margin: 0 15px;
+    border-bottom: 1px solid $bordercolor;
+    li {
+        display: inline-block;
+        padding: 10px 20px;
+        a {
+            color: $bordercolor;
+            &.active,
+            &:hover {
+                color: $maincolor;
+            }
+        }
+    }
+}
+
 .member-form {
     .input-group {
         label {
