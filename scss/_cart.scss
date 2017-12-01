@@ -110,6 +110,7 @@
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    input[type="password"],
     select {
         @include custom_select;
         background-color: #fff;
@@ -128,12 +129,16 @@
         margin: 5px 0;
     }
     .bus-4+.bus-8 {
-        max-width: calc(66.666666% - 10px);
-        margin-left: 10px;
+        @include range-width(768px, 0) {
+            max-width: calc(66.666666% - 10px);
+            margin-left: 10px;
+        }
     }
     .bus-4+.bus-4 {
-        max-width: calc(33.33333% - 10px);
-        margin-left: 10px;
+        @include range-width(768px, 0) {
+            max-width: calc(33.33333% - 10px);
+            margin-left: 10px;
+        }
     }
     .label-block {
         margin: 5px 0;

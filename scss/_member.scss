@@ -1,0 +1,53 @@
+.member-form {
+    .input-group {
+        label {
+            font-size: 0;
+            p {
+                font-size: 1rem;
+                display: inline-block;
+                width: 150px;
+                padding: 10px;
+                box-sizing: border-box;
+                &+input {
+                    width: calc(100% - 151px);
+                }
+            }
+        }
+        select {
+            width: calc((100% - 152px)/ 2);
+        }
+    }
+    h3 {
+        border-bottom: 1px solid #000;
+        margin-bottom: 15px;
+    }
+    .btn-group {
+        text-align: right;
+    }
+    .bus-6+.bus-6 {
+        @include range-width(768px, 0) {
+            .input-group {
+                label {
+                    p {
+                        width: 100px;
+                        &+input {
+                            width: calc(100% - 101px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-outline-gray {
+    border: 2px solid $bordercolor;
+    color: $bordercolor !important;
+    padding: 5px 15px;
+}
+
+.btn-outline-yellow {
+    border: 2px solid #E8BB54;
+    color: #E8BB54 !important;
+    padding: 5px 15px;
+}

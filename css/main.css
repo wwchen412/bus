@@ -689,6 +689,7 @@ footer {
   .shipping-block input[type="text"],
   .shipping-block input[type="email"],
   .shipping-block input[type="tel"],
+  .shipping-block input[type="password"],
   .shipping-block select {
     appearance: none;
     -moz-appearance: none;
@@ -706,6 +707,7 @@ footer {
     .shipping-block input[type="text"]:focus,
     .shipping-block input[type="email"]:focus,
     .shipping-block input[type="tel"]:focus,
+    .shipping-block input[type="password"]:focus,
     .shipping-block select:focus {
       outline-offset: 0; }
   .shipping-block select {
@@ -714,12 +716,14 @@ footer {
     appearance: list; }
   .shipping-block .input-group {
     margin: 5px 0; }
-  .shipping-block .bus-4 + .bus-8 {
-    max-width: calc(66.666666% - 10px);
-    margin-left: 10px; }
-  .shipping-block .bus-4 + .bus-4 {
-    max-width: calc(33.33333% - 10px);
-    margin-left: 10px; }
+  @media screen and (min-width: 768px) {
+    .shipping-block .bus-4 + .bus-8 {
+      max-width: calc(66.666666% - 10px);
+      margin-left: 10px; } }
+  @media screen and (min-width: 768px) {
+    .shipping-block .bus-4 + .bus-4 {
+      max-width: calc(33.33333% - 10px);
+      margin-left: 10px; } }
   .shipping-block .label-block {
     margin: 5px 0;
     display: inline-block;
@@ -787,6 +791,44 @@ footer {
   @media screen and (max-width: 576px) and (min-width: 300px) {
     .btn-block {
       width: 100%; } }
+
+.member-form .input-group label {
+  font-size: 0; }
+  .member-form .input-group label p {
+    font-size: 1rem;
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .member-form .input-group label p + input {
+      width: calc(100% - 151px); }
+
+.member-form .input-group select {
+  width: calc((100% - 152px)/ 2); }
+
+.member-form h3 {
+  border-bottom: 1px solid #000;
+  margin-bottom: 15px; }
+
+.member-form .btn-group {
+  text-align: right; }
+
+@media screen and (min-width: 768px) {
+  .member-form .bus-6 + .bus-6 .input-group label p {
+    width: 100px; }
+    .member-form .bus-6 + .bus-6 .input-group label p + input {
+      width: calc(100% - 101px); } }
+
+.btn-outline-gray {
+  border: 2px solid #c7c7c7;
+  color: #c7c7c7 !important;
+  padding: 5px 15px; }
+
+.btn-outline-yellow {
+  border: 2px solid #E8BB54;
+  color: #E8BB54 !important;
+  padding: 5px 15px; }
 
 * {
   padding: 0;
@@ -925,6 +967,10 @@ b {
 
 .container {
   max-width: 1170px;
+  margin: 0 auto; }
+
+.container-mini {
+  max-width: 575px;
   margin: 0 auto; }
 
 .d-flex {
