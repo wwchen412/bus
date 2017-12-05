@@ -9,7 +9,10 @@
     /* ---- .element-item ---- */
     .grid-item,
     .grid-sizer {
-        width: calc(20% - 2px);
+        width: calc(20% - 2.5px);
+        @include range-width(300px, 576px) {
+            width: calc(50% - 2.5px);
+        }
     }
     .grid-item {
         float: left;
@@ -17,8 +20,11 @@
         // background: #0D8;
         box-sizing: border-box;
         position: relative;
-        padding-bottom: calc(20% - 6px);
+        padding-bottom: calc(20% - 5px);
         border: 2px solid #fff;
+        @include range-width(300px, 576px) {
+            padding-bottom: calc(50% - 5px);
+        }
         img {
             position: absolute;
             top: 0;
@@ -28,11 +34,17 @@
             object-fit: cover;
         }
         &.grid-item--width2 {
-            width: calc(40% - 2px);
+            width: calc(40% - 4px);
+            @include range-width(300px, 576px) {
+                width: calc(100% - 4px);
+            }
         }
         &.grid-item--height2 {
             // height: 40%;
             padding-bottom: calc(40% - 4px);
+            @include range-width(300px, 576px) {
+                padding-bottom: calc(100% - 4px);
+            }
         }
     }
     /* clear fix */
