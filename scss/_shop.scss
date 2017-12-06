@@ -8,6 +8,16 @@
         &:visited {
             color: rgba($bordercolor, .8);
         }
+        &:after {
+            content: '>';
+            display: inline-block;
+            margin: 0 5px;
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
     }
 }
 

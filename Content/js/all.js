@@ -1,6 +1,6 @@
 // header.js
 $('header').load('index.html header');
-
+$('footer').load('index.html footer');
 // faq.js
 $('.faq-q').each(function() {
     $(this).click(function() {
@@ -94,7 +94,7 @@ var brandlist = [{
     ]
 }, {
     brandName: '無印良品',
-    brandLogo: 'Content/img/logo-10.png',
+    brandLogo: 'Content/img/logo-8.png',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
