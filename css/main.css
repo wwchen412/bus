@@ -67,7 +67,8 @@ header {
       -ms-flex-order: 2;
       order: 2;
       text-align: center;
-      width: 100%; } }
+      width: 100%;
+      display: none; } }
   header .icon-btns {
     height: 30px;
     vertical-align: middle;
@@ -362,7 +363,8 @@ footer {
     display: inline-block;
     width: 35px;
     margin: 0 5px;
-    position: relative; }
+    position: relative;
+    vertical-align: middle; }
     footer .social li:hover .tip {
       display: inline-block; }
     footer .social li .tip:before {
@@ -521,7 +523,8 @@ footer {
   border: 0;
   cursor: pointer;
   font-size: 1rem;
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
   .btn:hover, .btn:visited, .btn:active {
     color: #fff; }
 
@@ -732,38 +735,6 @@ footer {
       box-sizing: border-box; }
   .shipping-block h3 {
     padding: 10px 0; }
-  .shipping-block input[type="text"],
-  .shipping-block input[type="email"],
-  .shipping-block input[type="tel"],
-  .shipping-block input[type="password"],
-  .shipping-block select,
-  .shipping-block textarea {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: 0;
-    background-color: #fff;
-    font-size: 1rem;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    border: 1px solid #c7c7c7;
-    border-radius: 4px; }
-    .shipping-block input[type="text"]:focus,
-    .shipping-block input[type="email"]:focus,
-    .shipping-block input[type="tel"]:focus,
-    .shipping-block input[type="password"]:focus,
-    .shipping-block select:focus,
-    .shipping-block textarea:focus {
-      outline-offset: 0; }
-  .shipping-block select {
-    -webkit-appearance: list;
-    -moz-appearance: list;
-    appearance: list; }
-  .shipping-block .input-group {
-    margin: 5px 0; }
   @media screen and (min-width: 768px) {
     .shipping-block .bus-4 + .bus-8 {
       max-width: calc(66.666666% - 10px);
@@ -1019,6 +990,41 @@ footer {
       .faq-group > div.faq-a:before {
         content: 'A'; }
 
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #c7c7c7;
+  background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .login-form {
+      -webkit-box-shadow: 3px 3px 10px 1px #E5E5E5;
+      box-shadow: 3px 3px 10px 1px #E5E5E5;
+      border-radius: 10px; } }
+  .login-form h3 {
+    color: #595757; }
+  .login-form .logo {
+    max-width: 200px;
+    margin: 0 auto 30px; }
+  .login-form .input-group {
+    margin: 20px 0; }
+  .login-form a {
+    color: #c7c7c7; }
+    .login-form a:active, .login-form a:visited, .login-form a:hover {
+      color: rgba(199, 199, 199, 0.7); }
+
+.fb-login-button {
+  width: 100%; }
+
+.btn-login {
+  width: 100%;
+  max-width: 150px;
+  background: #eeb100;
+  border-radius: 25px;
+  padding: 10px; }
+
 * {
   padding: 0;
   margin: 0;
@@ -1177,6 +1183,18 @@ b {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.align-items-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .flex-cloumn {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1192,7 +1210,7 @@ b {
 
 #wrap {
   margin-top: 50px;
-  min-height: calc(100vh - 190px); }
+  min-height: calc(100vh - 185px); }
   @media screen and (min-width: 769px) {
     #wrap.index {
       margin-top: 0; } }
@@ -1216,3 +1234,47 @@ b {
 @media screen and (max-width: 768px) and (min-width: 300px) {
   .text-xs-left {
     text-align: left; } }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="password"]:focus,
+  select:focus,
+  textarea:focus {
+    outline-offset: 0; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="password"]:focus,
+  select:focus,
+  textarea:focus {
+    outline-color: #3B89DA;
+    outline-offset: -3px;
+    outline-width: 1px; }
+
+select {
+  -webkit-appearance: list;
+  -moz-appearance: list;
+  appearance: list; }
+
+.input-group {
+  margin: 5px 0; }

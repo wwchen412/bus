@@ -8,6 +8,7 @@
 @import '_cart.scss';
 @import '_member.scss';
 @import '_faq.scss';
+@import '_login.scss';
 * {
     // outline: 1px solid #f00;
     padding: 0;
@@ -161,6 +162,14 @@ b {
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
 .flex-cloumn {
     flex-direction: column;
 }
@@ -181,7 +190,7 @@ b {
         }
     }
     margin-top: 50px;
-    min-height: calc(100vh - 190px);
+    min-height: calc(100vh - 185px);
     @include range-width(300px, 768px) {
         margin-top: 110px;
     }
@@ -209,4 +218,35 @@ b {
     @include range-width(300px, 768px) {
         text-align: left;
     }
+}
+
+// input
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+    @include custom_select;
+    background-color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $bordercolor;
+    border-radius: 4px;
+    &:focus {
+        outline-color: #3B89DA;
+        outline-offset: -3px;
+        outline-width: 1px;
+    }
+}
+
+select {
+    appearance: list;
+}
+
+.input-group {
+    margin: 5px 0;
 }

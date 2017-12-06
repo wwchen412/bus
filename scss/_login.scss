@@ -1,0 +1,42 @@
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: $bordercolor;
+    background-color: #fff;
+    @include range-width(768px, 0) {
+        box-shadow: 3px 3px 10px 1px $lightborder;
+        border-radius: 10px;
+    }
+    h3 {
+        color: $maincolor;
+    }
+    .logo {
+        max-width: 200px;
+        margin: 0 auto 30px;
+    }
+    .input-group {
+        margin: 20px 0;
+    }
+    a {
+        color: $bordercolor;
+        &:active,
+        &:visited,
+        &:hover {
+            color: rgba($bordercolor, .7);
+        }
+    }
+}
+
+.fb-login-button {
+    width: 100%;
+}
+
+.btn-login {
+    width: 100%;
+    max-width: 150px;
+    background: #eeb100;
+    border-radius: 25px;
+    padding: 10px;
+}

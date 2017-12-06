@@ -107,28 +107,6 @@
     h3 {
         padding: 10px 0;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="password"],
-    select,
-    textarea {
-        @include custom_select;
-        background-color: #fff;
-        font-size: 1rem;
-        padding: 10px;
-        box-sizing: border-box;
-        display: inline-block;
-        width: 100%;
-        border: 1px solid $bordercolor;
-        border-radius: 4px;
-    }
-    select {
-        appearance: list;
-    }
-    .input-group {
-        margin: 5px 0;
-    }
     .bus-4+.bus-8 {
         @include range-width(768px, 0) {
             max-width: calc(66.666666% - 10px);
