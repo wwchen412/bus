@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
             <div class="menu">
                 <ul>
                     <li><a href="">逛巴士</a> </li>
-                    <li><a href="">逛品牌</a></li>
+                    <li><a href="brand-list.html">逛品牌</a></li>
                     <li> <a href="">逛商品</a></li>
                     <li><a href="">逛美食</a></li>
                 </ul>
@@ -37,7 +39,7 @@
                         <div class="tip">會員中心</div>
                     </li>
                     <li>
-                        <a href=""><img src="Content/img/cart.svg" alt="">
+                        <a href="cart.html"><img src="Content/img/cart.svg" alt="">
                             <div class="cart-num d-sm-none">1</div>
                         </a>
                         <div class="tip">購物車</div>
@@ -59,7 +61,7 @@
             <img src="Content/img/heroImg.png" alt="">
         </div>
         <!--  精選商品-->
-        <div id="Commodity">
+        <div id="Commodity" class="">
             <div class="continer-fluid">
                 <div class="row">
                     <div class="bus-6 bus-sm-12">
@@ -75,9 +77,9 @@
                         </div>
                     </div>
                     <div class="bus-6 bus-sm-12">
-                        <ul class="commodity-list">
-                            <div class="row">
-                                <li class="bus-4">
+                        <div class="commodity-list swiper-slider swiper-container">
+                            <div class="row swiper-wrapper" style="flex-wrap:nowrap">
+                                <li class="bus-4 swiper-slide">
                                     <div class="commodity-list-block">
                                         <div>
                                             <div class="commodity-list-blockinner">
@@ -92,10 +94,8 @@
                                         <img src="Content/img/list-2.png" alt="" class="img-fluid">
                                     </div>
                                 </li>
-                                <li class="bus-4">
-                                    <div class="img-wrap">
-                                        <img src="Content/img/list.png" alt="" class="img-fluid">
-                                    </div>
+                                <li class="bus-4 swiper-slide">
+
 
                                     <div class="commodity-list-block">
                                         <div>
@@ -107,8 +107,58 @@
                                         </div>
 
                                     </div>
+                                    <div class="img-wrap">
+                                        <img src="Content/img/list.png" alt="" class="img-fluid">
+                                    </div>
                                 </li>
-                                <li class="bus-4">
+                                <li class="bus-4 swiper-slide">
+                                    <div class="commodity-list-block">
+                                        <div>
+                                            <div class="commodity-list-blockinner">
+                                                <h3>獨家商品 </h3>
+
+                                                <h2>30%off</h2>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="Content/img/list-2.png" alt="" class="img-fluid">
+                                    </div>
+                                </li>
+                                <li class="bus-4 swiper-slide">
+                                    <div class="commodity-list-block">
+                                        <div>
+                                            <div class="commodity-list-blockinner">
+                                                <h3>獨家商品 </h3>
+
+                                                <h2>30%off</h2>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="Content/img/list-2.png" alt="" class="img-fluid">
+                                    </div>
+                                </li>
+                                <li class="bus-4 swiper-slide">
+
+
+                                    <div class="commodity-list-block">
+                                        <div>
+                                            <div class="commodity-list-blockinner">
+                                                <h3>獨家商品 </h3>
+
+                                                <h2>30%off</h2>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="img-wrap">
+                                        <img src="Content/img/list.png" alt="" class="img-fluid">
+                                    </div>
+                                </li>
+                                <li class="bus-4 swiper-slide">
                                     <div class="commodity-list-block">
                                         <div>
                                             <div class="commodity-list-blockinner">
@@ -125,22 +175,25 @@
                                 </li>
 
                             </div>
+                            <div class="swiper-pagination"></div>
 
-                        </ul>
+
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="slider-dots">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+
                 </div>
             </div>
 
         </div>
+
+
+
         <!-- 奇怪的四格主成的圖 -->
         <div class="small-banner mb-40">
             <ul>
@@ -159,28 +212,33 @@
                     <div class="brand-select">
                         <h2>精選逛品牌</h2>
                         <h3 class="mb">Brand</h3>
-                        <div class="brand-slider mb-40">
-                            <ul class="row">
-                                <li class="bus-4"><img src="Content/img/logo.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-2.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-3.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-4.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-5.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-6.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-7.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-8.png" alt="" class="img-fluid"></li>
-                                <li class="bus-4"><img src="Content/img/logo-9.png" alt="" class="img-fluid"></li>
+                        <div class="brand-slider mb-40 swiper-container">
+                            <ul class="row brand-slick swiper-wrapper">
+                                <li class="swiper-slide"><img src="Content/img/logo.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-2.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-3.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-4.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-5.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-6.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-7.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-8.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-9.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-9.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-9.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-2.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-3.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-4.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-2.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-3.png" alt="" class="img-fluid"></li>
+                                <li class="swiper-slide"><img src="Content/img/logo-4.png" alt="" class="img-fluid"></li>
                             </ul>
+                            <div class="dots">
+
+                            </div>
                         </div>
-                        <div class="dots">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
                 <div class="bus-8 bus-sm-12 brand-content">
@@ -277,7 +335,50 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/swiper.jquery.min.js"></script>
     <script src="Content/js/all.js"></script>
+
+    </script>
+    <!-- <script src="content/js/slick.min.js"></script> -->
+    <script>
+        // 精選商品
+        var swiper = new Swiper('.swiper-slider', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.slider-dots',
+                clickable: true
+            },
+
+
+        });
+
+
+
+        var swiper = new Swiper('.brand-slider', {
+            slidesPerView: 3,
+            slidesPerColumn: 3,
+            spaceBetween: 5,
+            slidesPerGroup: 9,
+
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.dots',
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
 
 </html>

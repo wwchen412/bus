@@ -21,6 +21,7 @@
         }
     }
     .commodity-list {
+        overflow: hidden;
         .bus-4 {
             &>* {
                 width: 100%;
@@ -46,7 +47,8 @@
                 transform: translate(-50%, 0);
                 left: 50%;
             }
-            &:nth-child(odd) {
+            &:nth-child(3n+1),
+            &:nth-child(3n+3) {
                 .img-wrap:before {
                     @extend %img-tran;
                     border-width: 30px 25px 0 25px;
@@ -55,13 +57,21 @@
                     z-index: 1;
                 }
             }
-            &:nth-child(even) {
-                .img-wrap:before {
-                    @extend %img-tran;
-                    border-width: 0px 25px 30px 25px;
-                    border-color: transparent transparent #ffffff transparent;
-                    bottom: 0;
-                    z-index: 1;
+            &:nth-child(3n+2) {
+                display: flex;
+                flex-wrap: wrap;
+                .img-wrap {
+                    order: 1;
+                    &:before {
+                        @extend %img-tran;
+                        border-width: 0px 25px 30px 25px;
+                        border-color: transparent transparent #ffffff transparent;
+                        bottom: 0;
+                        z-index: 1;
+                    }
+                }
+                .commodity-list-block {
+                    order: 2;
                 }
             }
         }
@@ -95,11 +105,9 @@
         }
     }
     .slider-dots {
-        padding: 15px 0;
-        ul {
-            text-align: center;
-        }
-        li {
+        padding: 15px 0 15px;
+        text-align: center;
+        span {
             display: inline-block;
             width: 10px;
             height: 10px;
@@ -182,7 +190,7 @@
     }
     .dots {
         text-align: center;
-        li {
+        span {
             display: inline-block;
             width: 7.5px;
             height: 7.5px;
