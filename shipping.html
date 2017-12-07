@@ -24,45 +24,49 @@
 
             </div>
             <div class="shipping-block">
-                <div class="row">
-                    <div class="bus-6 bus-sm-12">
-                        <div class="shipping-from">
-                            <form action="">
+                <form action="" id="shipping-form">
+                    <div class="row">
+                        <div class="bus-6 bus-sm-12">
+                            <div class="shipping-from">
+
 
                                 <h3>收信人資料填寫</h3>
-                                <div class="row">
+                                <div class="row my-selector-a">
                                     <div class="bus-4 bus-sm-12">
                                         <div class="input-group">
-                                            <input name="name" type="text" placeholder="姓名">
+                                            <input name="name" type="text" placeholder="姓名" required>
                                         </div>
                                     </div>
                                     <div class="bus-8 bus-sm-12">
                                         <div class="input-group">
-                                            <input name="name" type="tel" placeholder="電話">
+                                            <input name="tel" type="tel" placeholder="手機" required class="mobileTaiwan">
                                         </div>
                                     </div>
                                     <div class="bus-12">
                                         <div class="input-group">
-                                            <input name="name" type="email" placeholder="請輸入電子信箱">
+                                            <input name="email" type="email" placeholder="請輸入電子信箱" required>
                                         </div>
                                     </div>
+                                    <!-- 地址選擇 -->
+
                                     <div class="bus-4 bus-sm-12">
                                         <div class="input-group">
-                                            <select name="" id="">
+                                            <select name="" id="" class="country" required>
                                                    <option value="縣市">縣市</option>
                                                </select>
                                         </div>
                                     </div>
                                     <div class="bus-4 bus-sm-12">
                                         <div class="input-group">
-                                            <select name="" id="">
+                                            <select name="" id="" class="district" required>
                                                        <option value="縣市">鄉鎮市區</option>
                                                    </select>
                                         </div>
                                     </div>
+
                                     <div class="bus-12 bus-sm-12">
                                         <div class="input-group">
-                                            <input type="text" placeholder="聯絡地址">
+                                            <input type="text" placeholder="聯絡地址" required>
                                         </div>
                                     </div>
                                 </div>
@@ -71,19 +75,19 @@
                                     <div class="row">
                                         <div class="bus-12">
                                             <label for="pay1">
-                                                        <input type="radio" name="pay" id="pay1">
+                                                        <input type="radio" name="pay" id="pay1" required>
                                                         <div class="label-block">貨到付款</div>
                                                 </label>
                                         </div>
                                         <div class="bus-12">
                                             <label for="pay2">
-                                                 <input type="radio" name="pay" id="pay2">
+                                                 <input type="radio" name="pay" id="pay2" required>
                                                     <div class="label-block">線上刷卡</div>
                                                 </label>
                                         </div>
                                         <div class="bus-12">
                                             <label for="pay3">
-                                                     <input type="radio" name="pay" id="pay3">
+                                                     <input type="radio" name="pay" id="pay3" required>
                                                         <div class="label-block">分期線上付款</div>
                                                     </label>
                                         </div>
@@ -95,87 +99,88 @@
 
                                 <h3>請輸入優惠券代碼 <input type="text" placeholder="請輸入優惠券代碼" style="width:auto;"></h3>
 
-                            </form>
+
+                            </div>
+                        </div>
+                        <div class="bus-6 bus-sm-12">
+                            <h3>購物明細</h3>
+                            <div class="detail-form">
+                                <ul>
+                                    <li>
+                                        <div class="df-brand">
+                                            品牌A名稱
+                                        </div>
+                                        <div class="df-title d-flex">
+                                            <div class="item-name text-center">
+                                                品名
+                                            </div>
+                                            <div class="item-price text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                        <div class="df-content d-flex">
+                                            <div class="item-name text-center">
+                                                <p>桌上棒球x1</p>
+                                                <p>木製童趣撲克牌x1</p>
+                                                <p>療癒超級多肉植物x1</p>
+                                            </div>
+                                            <div class="item-price text-center d-flex text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="df-brand">
+                                            品牌A名稱
+                                        </div>
+                                        <div class="df-title d-flex">
+                                            <div class="item-name text-center">
+                                                品名
+                                            </div>
+                                            <div class="item-price text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                        <div class="df-content d-flex">
+                                            <div class="item-name text-center">
+                                                <p>桌上棒球x1</p>
+                                                <p>木製童趣撲克牌x1</p>
+                                                <p>療癒超級多肉植物x1</p>
+                                            </div>
+                                            <div class="item-price text-center d-flex text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="df-brand">
+                                            品牌A名稱
+                                        </div>
+                                        <div class="df-title d-flex">
+                                            <div class="item-name text-center">
+                                                品名
+                                            </div>
+                                            <div class="item-price text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                        <div class="df-content d-flex">
+                                            <div class="item-name text-center">
+                                                <p>桌上棒球x1</p>
+                                                <p>木製童趣撲克牌x1</p>
+                                                <p>療癒超級多肉植物x1</p>
+                                            </div>
+                                            <div class="item-price text-center d-flex text-center">
+                                                金額
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="submit" class="btn btn-orange btn-block">確認結帳</button>
                         </div>
                     </div>
-                    <div class="bus-6 bus-sm-12">
-                        <h3>購物明細</h3>
-                        <div class="detail-form">
-                            <ul>
-                                <li>
-                                    <div class="df-brand">
-                                        品牌A名稱
-                                    </div>
-                                    <div class="df-title d-flex">
-                                        <div class="item-name text-center">
-                                            品名
-                                        </div>
-                                        <div class="item-price text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                    <div class="df-content d-flex">
-                                        <div class="item-name text-center">
-                                            <p>桌上棒球x1</p>
-                                            <p>木製童趣撲克牌x1</p>
-                                            <p>療癒超級多肉植物x1</p>
-                                        </div>
-                                        <div class="item-price text-center d-flex text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="df-brand">
-                                        品牌A名稱
-                                    </div>
-                                    <div class="df-title d-flex">
-                                        <div class="item-name text-center">
-                                            品名
-                                        </div>
-                                        <div class="item-price text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                    <div class="df-content d-flex">
-                                        <div class="item-name text-center">
-                                            <p>桌上棒球x1</p>
-                                            <p>木製童趣撲克牌x1</p>
-                                            <p>療癒超級多肉植物x1</p>
-                                        </div>
-                                        <div class="item-price text-center d-flex text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="df-brand">
-                                        品牌A名稱
-                                    </div>
-                                    <div class="df-title d-flex">
-                                        <div class="item-name text-center">
-                                            品名
-                                        </div>
-                                        <div class="item-price text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                    <div class="df-content d-flex">
-                                        <div class="item-name text-center">
-                                            <p>桌上棒球x1</p>
-                                            <p>木製童趣撲克牌x1</p>
-                                            <p>療癒超級多肉植物x1</p>
-                                        </div>
-                                        <div class="item-price text-center d-flex text-center">
-                                            金額
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <button type="button" class="btn btn-orange btn-block">確認結帳</button>
-                    </div>
-                </div>
+                </form>
             </div>
 
 
@@ -239,7 +244,32 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/jquery.validate.min.js"></script>
+    <script src="Content/js/validate-plus.js"></script>
+    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
+    <script>
+        new TwCitySelector({
+            el: ".my-selector-a", // 同 DOM querySelector()
+            elCounty: ".country",
+            elDistrict: ".district"
+        });
+    </script>
+    <script>
+        $("#shipping-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
+        });
+    </script>
 
 
 </body>

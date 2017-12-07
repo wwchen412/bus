@@ -94,14 +94,29 @@
     }
 }
 
+.error {
+    font-size: 0.9rem;
+    color: #C0281B;
+}
+
 // 結帳頁
 .shipping-block {
     padding: 15px 0;
-    &>.row {
+    .row {
         margin: 0 -15px;
         &>.bus-6 {
-            padding: 0 15px;
+            // padding: 0 15px;
             box-sizing: border-box;
+        }
+    }
+    form {
+        .row {
+            &>.bus-6 {
+                padding: 0 15px;
+                .row {
+                    margin: 0;
+                }
+            }
         }
     }
     h3 {
@@ -184,3 +199,5 @@
         width: 100%;
     }
 }
+
+v

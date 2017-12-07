@@ -154,7 +154,14 @@
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="Content/js/all.js"></script>
+    <script>
+        var input_num = document.querySelectorAll('.input-number').length;
 
+        for (i = 0; i < input_num; i++) {
+            $('.input-number').eq(i).addClass('addnum' + i);
+            inputNumber($('.addnum' + i));
+        }
+    </script>
 
 </body>
 

@@ -1,13 +1,29 @@
 // header.js
 $('header').load('index.html header');
 $('footer').load('index.html footer');
+
+$(window).bind("load", function() {
+
+    $('.menu-btn').click(function() {
+        $('.menu').slideToggle();
+    })
+
+});
+
 // faq.js
+
+$('.faq-nav li.active').click(function() {
+    event.preventDefault();
+    $(this).siblings().slideToggle();
+
+})
 $('.faq-q').each(function() {
     $(this).click(function() {
-
         $(this).siblings('.faq-a').slideToggle();
     })
 });
+
+
 // 精選逛品牌品牌選擇
 
 // 假資料
@@ -123,3 +139,46 @@ function brandSelect() {
         brandItems[a].innerHTML = '<img src="' + bImg + '" alt="" class="img-fluid ">';
     }
 };
+
+// 數字增減
+
+
+(function() {
+
+    window.inputNumber = function(el) {
+
+        var min = el.attr('min') || false;
+        var max = el.attr('max') || false;
+
+        var els = {};
+
+        els.dec = el.prev();
+        els.inc = el.next();
+
+        el.each(function() {
+            init($(this));
+        });
+
+        function init(el) {
+
+            els.dec.on('click', decrement);
+            els.inc.on('click', increment);
+
+            function decrement() {
+                var value = el[0].value;
+                value--;
+                if (!min || value >= min) {
+                    el[0].value = value;
+                }
+            }
+
+            function increment() {
+                var value = el[0].value;
+                value++;
+                if (!max || value <= max) {
+                    el[0].value = value++;
+                }
+            }
+        }
+    }
+})();
