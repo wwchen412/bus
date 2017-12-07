@@ -33,28 +33,28 @@
         <div class="login-form text-center">
             <div class="logo  mb"><img src="Content/img/logo.svg" alt=""></div>
             <h3>註冊</h3>
-            <form action="">
+            <form action="" id="signup-form">
 
                 <div class="input-group">
                     <label for="">
-                        <input type="email" placeholder="電子信箱">
+                        <input name="email" type="email" placeholder="電子信箱" required>
                     </label>
                 </div>
                 <div class="input-group">
                     <label for="">
-                        <input type="password" placeholder="密碼">
+                        <input name=" user_pwd" type="password" placeholder="密碼" required class="user_pwd" id="user_pwd">
                     </label>
                 </div>
                 <div class="input-group">
                     <label for="">
-                            <input type="password" placeholder="密碼確認">
+                            <input name="user_pwd_again" type="password" placeholder="密碼確認" required class="user_pwd_again">
                         </label>
                 </div>
-                <button type="button" class="btn btn-login mb-40">註冊</button>
+                <button type="submit" class="btn btn-login mb-40">註冊</button>
                 <p class="mb">or</p>
                 <div class="fb-login-button mb" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                <a href="">忘記密碼 </a>|
-                <a href="">已有帳號 </a>
+                <a href="forget.html">忘記密碼 </a>|
+                <a href="login.html">已有帳號 </a>
 
             </form>
         </div>
@@ -118,7 +118,26 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/jquery.validate.min.js"></script>
+    <script src="Content/js/validate-plus.js"></script>
+    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
+
+    <script>
+        $("#signup-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
+        });
+    </script>
 
 
 </body>

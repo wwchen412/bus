@@ -32,7 +32,7 @@
             <div class="shipping-block">
 
                 <div class="member-form" style="padding:40px 15px;">
-                    <form action="">
+                    <form action="" id="contact-form">
 
                         <h3>聯絡我們</h3>
                         <div class="row mb py">
@@ -40,7 +40,7 @@
                                 <div class="input-group">
                                     <label for="">
                                             <p>你的姓名</p>
-                                            <input name="name" type="text" >
+                                            <input name="name" type="text" required>
                                         </label>
 
                                 </div>
@@ -49,7 +49,7 @@
                                 <div class="input-group">
                                     <label for="">
                                                 <p>電話</p>
-                                            <input name="tel" type="tel">
+                                            <input name="tel" type="tel" class="" required>
                                         </label>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                                 <div class="input-group">
                                     <label for="">
                                                 <p>電子信箱</p>
-                                                    <input name="name" type="email" >
+                                                    <input name="email" type="email" required>
                                             </label>
 
                                 </div>
@@ -67,7 +67,7 @@
                                 <div class="input-group mb">
                                     <label for="">
                                            <p>您的疑問</p>
-                                             <textarea name="" id="" cols="30" rows="10"></textarea>
+                                             <textarea name="textarea" id="" cols="30" rows="10" required></textarea>
                                         </label>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
 
                         <div class="btn-group">
 
-                            <button class="btn btn-outline-yellow" style="width:180px">確認修改</button>
+                            <button type="submit" class="btn btn-outline-yellow" style="width:180px">送出詢問</button>
                         </div>
 
 
@@ -143,8 +143,25 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/jquery.validate.min.js"></script>
+    <script src="Content/js/validate-plus.js"></script>
+    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
-
+    <script>
+        $("#contact-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
+        });
+    </script>
 
 </body>
 

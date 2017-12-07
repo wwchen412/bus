@@ -20,10 +20,10 @@
         // background: #0D8;
         box-sizing: border-box;
         position: relative;
-        padding-bottom: calc(20% - 5px);
+        padding-bottom: calc(20% - 4px);
         border: 2px solid #fff;
         @include range-width(300px, 576px) {
-            padding-bottom: calc(50% - 5px);
+            padding-bottom: calc(50% - 4px);
         }
         img {
             position: absolute;

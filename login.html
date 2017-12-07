@@ -33,18 +33,18 @@
         <div class="login-form text-center">
             <div class="logo  mb"><img src="Content/img/logo.svg" alt=""></div>
             <h3>登入</h3>
-            <form action="">
+            <form id="login-form" action="member.html">
                 <div class="input-group">
                     <label for="">
-                        <input type="text" placeholder="帳號">
+                        <input name="email" type="email" placeholder="帳號" required>
                     </label>
                 </div>
                 <div class="input-group">
                     <label for="">
-                            <input type="password" placeholder="密碼">
+                            <input name="passwrod" type="password" placeholder="密碼" required minlength="6" maxlength="12">
                         </label>
                 </div>
-                <button type="button" class="btn btn-login mb-40">登入</button>
+                <button type="submit" class="btn btn-login mb-40">登入</button>
                 <p class="mb-40">or</p>
                 <div class="fb-login-button mb" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
                 <a href="">忘記密碼 </a>|
@@ -61,7 +61,23 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/jquery.validate.min.js"></script>
+    <script src="Content/js/validate-plus.js"></script>
+    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
+
+    <script>
+        $("#login-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            }
+
+
+        });
+    </script>
 
 
 </body>

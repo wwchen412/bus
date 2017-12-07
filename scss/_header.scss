@@ -84,10 +84,17 @@ header {
                 display: inline-block;
             }
         }
-        img {
+        img,
+        svg {
             width: 25px;
             display: inline-block;
             vertical-align: middle;
+        }
+        svg {
+            fill: $maincolor;
+            &.active-menu {
+                fill: #2B357F;
+            }
         }
         .cart-num {
             display: inline-block;
@@ -115,6 +122,9 @@ header {
     border-radius: 4px;
     transform: translateX(-50%);
     word-break: keep-all;
+    @include range-width(300px, 768px) {
+        display: none !important;
+    }
     &:before {
         content: "";
         border-width: 5px;

@@ -5,6 +5,7 @@ $('footer').load('index.html footer');
 $(window).bind("load", function() {
 
     $('.menu-btn').click(function() {
+        $(this).find('svg').toggleClass('active-menu');
         $('.menu').slideToggle();
     })
 

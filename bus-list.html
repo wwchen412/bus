@@ -15,33 +15,61 @@
     </header>
 
 
-    <div id="wrap" class="d-flex justify-center align-items-center" style="background:#f2f2f2">
+    <div id="wrap">
+        <div class="container-fluid" style="padding:40px 15px;">
 
-
-        <div class="login-form text-center">
-            <div class="logo  mb"><img src="Content/img/logo.svg" alt=""></div>
-            <h3>註冊</h3>
-            <form action="" id="forget-form">
-
-                <div class="input-group">
-                    <label for="">
-                        <input name="email" type="email" placeholder="請輸入註冊時使用的email" required>
-                    </label>
-                    <!-- 點擊後查詢符合 並且顯示文字 -->
-                    <p class="sended"><small>已寄送密碼變更信至您的信箱</small></p>
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item  grid-item--width2 grid-item--height2">
+                    <a href="shop-list.html">
+                        <img src="Content/img/brand.png" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="shop-list.html"><img src="Content/img/bus.png" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="shop-list.html"><img src="Content/img/bus_2.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_3.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_4.png" alt=""></a>
+                </div>
+                <div class="grid-item">
+                    <a href="shop-list.html"><img src="Content/img/bus_5.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_6.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_7.png" alt=""></a>
                 </div>
 
-                <button type="submit" class="btn btn-login mb-40">查詢</button>
-
-                <p class="mb-40">or</p>
-                <a href="login.html">登入 </a>|
-                <a href="sign-up.html">註冊 </a>
-
-            </form>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_3.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_5.png" alt=""></a>
+                </div>
+                <div class="grid-item ">
+                    <a href="shop-list.html"><img src="Content/img/bus_6.png" alt=""></a>
+                </div>
+            </div>
         </div>
 
 
+
+
+
     </div>
+
+
+
 
     <footer>
 
@@ -99,23 +127,22 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="Content/js/jquery.validate.min.js"></script>
-    <script src="Content/js/validate-plus.js"></script>
-    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
-
+    <!-- grid -->
+    <script src="Content/js/isotope-docs.min.js"></script>
+    <script src="Content/js/isotope.pkgd.min.js"></script>
+    <script src="Content/js/bus-grid.js"></script>
     <script>
-        $("#forget-form").validate({
-            submitHandler: function(form) {
-                form.submit();
+        $('.grid').isotope({
+            layoutMode: 'packery',
+            packery: {
+                columnWidth: '.grid-sizer',
+                gutter: 2
             },
-            errorPlacement: function(error, element) {
-                element.closest('.input-group').append(error);
-            }
+            itemSelector: '.grid-item',
+            percentPosition: true
         });
     </script>
-
-
 </body>
 
 </html>
