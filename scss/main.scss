@@ -225,6 +225,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"],
+input[type="date"],
 select,
 textarea {
     &.error {
@@ -257,11 +258,12 @@ input[type="radio"] {
     }
 }
 
-select {
-    appearance: list;
+.select-wrap {
+    display: inline-block;
     position: relative;
     &:after {
         content: '';
+        display: block;
         position: absolute;
         right: 10px;
         top: 16px;
@@ -272,6 +274,11 @@ select {
         border-width: 10px 10px 0 10px;
         border-color: #c7c7c7 transparent transparent transparent;
     }
+}
+
+select {
+    appearance: listbox;
+    position: relative;
 }
 
 .input-group {

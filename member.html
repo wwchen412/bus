@@ -32,15 +32,15 @@
                 <div class="" style="padding:0 15px">
 
                     <div class="member-form">
-                        <form action="">
+                        <form action="" id="member-form">
 
                             <h3>收信人資料填寫</h3>
-                            <div class="row">
+                            <div class="row my-selector-a">
                                 <div class="bus-6 bus-sm-12">
                                     <div class="input-group">
                                         <label for="">
                                             <p>會員姓名</p>
-                                            <input name="name" type="text" placeholder="姓名">
+                                            <input name="name" type="text" placeholder="姓名" required>
                                         </label>
 
                                     </div>
@@ -49,15 +49,15 @@
                                     <div class="input-group">
                                         <label for="">
                                                 <p>生日</p>
-                                            <input name="birth" type="text">
+                                            <input name="birth" type="date" style="font-size:.8rem;" required>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="bus-12">
                                     <div class="input-group">
                                         <label for="">
-                                            <p>會員電話</p>
-                                                <input name="tel" type="tel" >
+                                            <p>會員手機</p>
+                                                <input name="tel" type="tel" required class="mobileTaiwan" required>
                                         </label>
 
                                     </div>
@@ -66,7 +66,7 @@
                                     <div class="input-group">
                                         <label for="">
                                                 <p>電子信箱</p>
-                                                    <input name="name" type="email" >
+                                                    <input name="email" type="email" required>
                                             </label>
 
                                     </div>
@@ -75,14 +75,18 @@
                                     <div class="input-group">
                                         <label for="">
                                             <p>會員地址</p>
-                                             <select name="" id="">
-                                                   <option value="縣市">縣市</option>
-                                               </select>
+                                            <div class="select-wrap">
+                                                <select name="" id="" class="country" required>
+                                                    <option value="縣市">縣市</option>
+                                                </select>
+                                            </div>
+                                             
                                                
                                          </label>
-                                        <select name="" id="">
+                                        <div class="select-wrap">
+                                            <select name="" id="" class="district" required>
                                                     <option value="縣市">鄉鎮市區</option>
-                                        </select>
+                                        </select></div>
                                     </div>
                                 </div>
 
@@ -90,7 +94,7 @@
 
                                     <div class="input-group">
                                         <label for=""><p></p>
-                                        <input type="text" placeholder="聯絡地址"></label>
+                                        <input type="text" placeholder="聯絡地址" required></label>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +113,7 @@
 
                                         <div class="input-group">
                                             <label for=""><p>新密碼</p>
-                                           <input type="password" value=""></label>
+                                           <input type="password" value="" name="user_pwd" minlength="6" class="user_pwd" id="user_pwd_input"></label>
                                         </div>
 
                                     </div>
@@ -117,7 +121,7 @@
 
                                         <div class="input-group">
                                             <label for=""><p>密碼確認</p>
-                                             <input type="password" value=""></label>
+                                             <input type="password" value="" class="user_pwd_again" name=""></label>
                                         </div>
 
                                     </div>
@@ -128,7 +132,7 @@
                             </div>
                             <div class="btn-group">
                                 <a href="" class="btn btn-outline-gray">取消修改</a>
-                                <button class="btn btn-outline-yellow">確認修改</button>
+                                <button type="submit" class="btn btn-outline-yellow">確認修改</button>
                             </div>
 
 
@@ -197,8 +201,38 @@
     </footer>
     <!-- jQuery JS 1.12.4 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="Content/js/jquery.validate.min.js"></script>
+    <script src="Content/js/validate-plus.js"></script>
+    <script src="Content/js/tw-city-selector.min.js"></script>
     <script src="Content/js/all.js"></script>
+    <script>
+        new TwCitySelector({
+            el: ".my-selector-a", // 同 DOM querySelector()
+            elCounty: ".country",
+            elDistrict: ".district"
+        });
+    </script>
+    <script>
+        $('.user_pwd').change(function() {
+            if ($(this).val.length !== 0) {
+                $('.user_pwd_again').attr('name', 'user_pwd_again');
+            }
+        })
 
+        $("#member-form").validate({
+            submitHandler: function(form) {
+                form.submit();
+            },
+            errorPlacement: function(error, element) {
+                element.closest('.input-group').append(error);
+            },
+            rules: {
+                user_pwd_again: {
+                    equalTo: '#user-pwd-input'
+                }
+            }
+        });
+    </script>
 
 </body>
 

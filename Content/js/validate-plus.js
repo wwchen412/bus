@@ -8,7 +8,7 @@ jQuery.extend(jQuery.validator.messages, {
     number: "本欄位請填入數字.",
     digits: "本欄位請填入數字.",
     creditcard: "請輸入正確的信用卡號.",
-    equalTo: "請再次輸入相同的值.",
+    equalTo: "請再次輸入相同的密碼",
     maxlength: $.validator.format("至多輸入 {0} 個字."),
     minlength: $.validator.format("至少輸入 {0} 個字."),
     rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),

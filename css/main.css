@@ -736,9 +736,9 @@ footer {
     .shipping-block .row > .bus-6 {
       -webkit-box-sizing: border-box;
       box-sizing: border-box; }
-  .shipping-block form .row > .bus-6 {
+  .shipping-block #shipping-form .bus-6 {
     padding: 0 15px; }
-    .shipping-block form .row > .bus-6 .row {
+    .shipping-block #shipping-form .bus-6 .row {
       margin: 0; }
   .shipping-block h3 {
     padding: 10px 0; }
@@ -831,6 +831,8 @@ footer {
 
 .member-form .input-group label {
   font-size: 0; }
+  .member-form .input-group label.error {
+    font-size: .9rem; }
   .member-form .input-group label p {
     font-size: 1rem;
     display: inline-block;
@@ -843,7 +845,7 @@ footer {
       vertical-align: top;
       width: calc(100% - 151px); }
 
-.member-form .input-group select {
+.member-form .input-group .select-wrap {
   width: calc((100% - 152px)/ 2); }
 
 .member-form h3 {
@@ -1292,6 +1294,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"],
+input[type="date"],
 select,
 textarea {
   appearance: none;
@@ -1311,6 +1314,7 @@ textarea {
   input[type="email"].error,
   input[type="tel"].error,
   input[type="password"].error,
+  input[type="date"].error,
   select.error,
   textarea.error {
     border-color: #C0281B;
@@ -1319,6 +1323,7 @@ textarea {
   input[type="email"]:focus,
   input[type="tel"]:focus,
   input[type="password"]:focus,
+  input[type="date"]:focus,
   select:focus,
   textarea:focus {
     outline-offset: 0; }
@@ -1326,6 +1331,7 @@ textarea {
   input[type="email"]:focus,
   input[type="tel"]:focus,
   input[type="password"]:focus,
+  input[type="date"]:focus,
   select:focus,
   textarea:focus {
     outline-color: #3B89DA;
@@ -1338,13 +1344,12 @@ input[type="radio"].error + .label-block {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-select {
-  -webkit-appearance: list;
-  -moz-appearance: list;
-  appearance: list;
+.select-wrap {
+  display: inline-block;
   position: relative; }
-  select:after {
+  .select-wrap:after {
     content: '';
+    display: block;
     position: absolute;
     right: 10px;
     top: 16px;
@@ -1354,6 +1359,12 @@ select {
     border-style: solid;
     border-width: 10px 10px 0 10px;
     border-color: #c7c7c7 transparent transparent transparent; }
+
+select {
+  -webkit-appearance: listbox;
+  -moz-appearance: listbox;
+  appearance: listbox;
+  position: relative; }
 
 .input-group {
   margin: 5px 0; }

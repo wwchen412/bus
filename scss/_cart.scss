@@ -109,13 +109,11 @@
             box-sizing: border-box;
         }
     }
-    form {
-        .row {
-            &>.bus-6 {
-                padding: 0 15px;
-                .row {
-                    margin: 0;
-                }
+    #shipping-form {
+        .bus-6 {
+            padding: 0 15px;
+            .row {
+                margin: 0;
             }
         }
     }
@@ -199,5 +197,3 @@
         width: 100%;
     }
 }
-
-v
