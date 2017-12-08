@@ -152,7 +152,7 @@
             position: relative;
             transition: .2s;
             cursor: pointer;
-            @include range-width(576px, 0) {
+            @include range-width(769px, 0) {
                 &:nth-child(3n+1) {
                     margin: 5px 6.5px;
                 }
@@ -205,7 +205,7 @@
                     margin-right: 10px;
                 }
             }
-            @include range-width(300px, 576px) {
+            @include range-width(300px, 768px) {
                 width: calc(100% / 2 - 5px);
                 padding-bottom: calc(100% / 2 - 5px);
                 &:nth-child(2n) {

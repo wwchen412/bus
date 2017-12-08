@@ -126,13 +126,13 @@
         padding: 10px 0;
     }
     .bus-4+.bus-8 {
-        @include range-width(768px, 0) {
+        @include range-width(769px, 0) {
             max-width: calc(66.666666% - 10px);
             margin-left: 10px;
         }
     }
     .bus-4+.bus-4 {
-        @include range-width(768px, 0) {
+        @include range-width(769px, 0) {
             max-width: calc(33.33333% - 10px);
             margin-left: 10px;
         }
@@ -142,8 +142,8 @@
         display: inline-block;
         padding: 30px 20px;
         background-color: $lightborder;
-        width: calc(100% - 30px);
-        margin-left: 10px;
+        width: calc(100% - 35px);
+        margin-left: 5px;
         text-align: center;
         border-radius: 4px;
         box-sizing: border-box;

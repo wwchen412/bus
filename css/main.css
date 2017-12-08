@@ -582,7 +582,7 @@ footer {
     -o-transition: .2s;
     transition: .2s;
     cursor: pointer; }
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 769px) {
       .shop-itemsList ul li:nth-child(3n+1) {
         margin: 5px 6.5px; }
       .shop-itemsList ul li:nth-child(1), .shop-itemsList ul li:nth-child(2) {
@@ -641,7 +641,7 @@ footer {
       .shop-itemsList ul li .item small {
         text-decoration: line-through;
         margin-right: 10px; }
-    @media screen and (max-width: 576px) and (min-width: 300px) {
+    @media screen and (max-width: 768px) and (min-width: 300px) {
       .shop-itemsList ul li {
         width: calc(100% / 2 - 5px);
         padding-bottom: calc(100% / 2 - 5px); }
@@ -754,11 +754,11 @@ footer {
       margin: 0; }
   .shipping-block h3 {
     padding: 10px 0; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     .shipping-block .bus-4 + .bus-8 {
       max-width: calc(66.666666% - 10px);
       margin-left: 10px; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     .shipping-block .bus-4 + .bus-4 {
       max-width: calc(33.33333% - 10px);
       margin-left: 10px; } }
@@ -767,8 +767,8 @@ footer {
     display: inline-block;
     padding: 30px 20px;
     background-color: #E5E5E5;
-    width: calc(100% - 30px);
-    margin-left: 10px;
+    width: calc(100% - 35px);
+    margin-left: 5px;
     text-align: center;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
