@@ -1280,7 +1280,8 @@ b {
 
 #hero-img {
   margin-bottom: 40px; }
-  #hero-img img {
+  #hero-img img,
+  #hero-img video {
     display: block;
     width: 100%; }
 
