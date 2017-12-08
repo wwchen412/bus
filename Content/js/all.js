@@ -6,7 +6,7 @@ $(window).bind("load", function() {
 
     $('.menu-btn').click(function() {
         $(this).find('svg').toggleClass('active-menu');
-        $('.menu').slideToggle();
+        $('.menu').slideToggle('fast');
     })
 
 });
@@ -31,6 +31,7 @@ $('.faq-q').each(function() {
 var brandlist = [{
     brandName: '點點心',
     brandLogo: 'Content/img/logo.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img2.png',
         'Content/img/brand-img2.png',
@@ -40,6 +41,7 @@ var brandlist = [{
 }, {
     brandName: 'LA BELLE',
     brandLogo: 'Content/img/logo-2.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -49,6 +51,7 @@ var brandlist = [{
 }, {
     brandName: 'Rocky Mountain',
     brandLogo: 'Content/img/logo-3.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img2.png',
         'Content/img/brand-img2.png',
@@ -58,6 +61,7 @@ var brandlist = [{
 }, {
     brandName: 'Pa',
     brandLogo: 'Content/img/logo-4.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img3.png',
         'Content/img/brand-img3.png',
@@ -67,6 +71,7 @@ var brandlist = [{
 }, {
     brandName: 'adidas',
     brandLogo: 'Content/img/logo-5.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img4.png',
@@ -76,6 +81,7 @@ var brandlist = [{
 }, {
     brandName: '無印良品',
     brandLogo: 'Content/img/logo-6.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -85,6 +91,7 @@ var brandlist = [{
 }, {
     brandName: '無印良品',
     brandLogo: 'Content/img/logo-7.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -94,6 +101,7 @@ var brandlist = [{
 }, {
     brandName: '無印良品',
     brandLogo: 'Content/img/logo-8.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -103,6 +111,7 @@ var brandlist = [{
 }, {
     brandName: '無印良品',
     brandLogo: 'Content/img/logo-9.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -112,6 +121,7 @@ var brandlist = [{
 }, {
     brandName: '無印良品',
     brandLogo: 'Content/img/logo-8.png',
+    brandLink: 'shop-list.html',
     shopBanner: [
         'Content/img/brand-img.png',
         'Content/img/brand-img.png',
@@ -123,8 +133,8 @@ var brandlist = [{
 var brand = document.querySelectorAll('.brand-slick li');
 
 for (var i = 0; i < brand.length; i++) {
-    brand[i].setAttribute('alt', brandlist[i].brandName);
-    brand[i].innerHTML = '<img src="' + brandlist[i].brandLogo + '" alt="" class="img-fluid ">';
+
+    brand[i].innerHTML = '<img src="' + brandlist[i].brandLogo + '" alt="' + brandlist[i].brandName + '" class="img-fluid ">';
     brand[i].addEventListener('click', brandSelect, false);
 
 }
@@ -136,8 +146,9 @@ function brandSelect() {
 
     for (var a = 0; a < brandItems.length; a++) {
         var bImg = brandlist[index].shopBanner[a];
-
-        brandItems[a].innerHTML = '<img src="' + bImg + '" alt="" class="img-fluid ">';
+        var bLink = brandlist[index].brandLink;
+        console.log(bLink);
+        brandItems[a].innerHTML = '<a href="' + bLink + '"><img src="' + bImg + '" alt="" class="img-fluid "></a>';
     }
 };
 
