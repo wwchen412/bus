@@ -1,3 +1,5 @@
+@import '_color.scss';
+@import '_mixin.scss';
 .member-nav {
     margin: 0 15px;
     border-bottom: 1px solid $bordercolor;
@@ -8,6 +10,12 @@
             color: $bordercolor;
             &.active,
             &:hover {
+                color: $maincolor;
+            }
+        }
+        &.active {
+            color: #f00;
+            a {
                 color: $maincolor;
             }
         }

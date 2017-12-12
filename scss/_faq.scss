@@ -1,4 +1,5 @@
 @import '_color.scss';
+@import '_mixin.scss';
 .faq-nav {
     @include range-width(300px, 768px) {
         border-bottom: 0;

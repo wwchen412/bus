@@ -1,8 +1,73 @@
+@media screen and (max-width: 768px) and (min-width: 300px) {
+  .faq-nav {
+    border-bottom: 0;
+    padding-top: 40px; }
+    .faq-nav ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      border: 1px solid #c7c7c7;
+      border-radius: 4px;
+      position: relative; }
+      .faq-nav ul:before {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #c7c7c7 transparent transparent transparent; }
+    .faq-nav li {
+      display: none;
+      width: 100%;
+      text-align: center; }
+      .faq-nav li.slide {
+        display: block; }
+      .faq-nav li.active {
+        display: block;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1; }
+        .faq-nav li.active a {
+          color: #595757; }
+      .faq-nav li:hover {
+        background-color: #f2f2f2; }
+      .faq-nav li a {
+        display: inline-block;
+        width: 100%; } }
+
 .faq-group {
-  border: 1px solid #000; }
-  .faq-group > div:before {
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #595757; }
+  border-bottom: 1px solid #c7c7c7; }
+  .faq-group > div {
+    padding: 10px 0; }
+    .faq-group > div:before {
+      content: '';
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: #595757;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 50px; }
+    .faq-group > div p {
+      padding-left: 15px;
+      display: inline-block;
+      width: calc(100% - 65px);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      vertical-align: middle; }
+    .faq-group > div.faq-q {
+      cursor: pointer; }
+      .faq-group > div.faq-q:before {
+        content: 'Q'; }
+    .faq-group > div.faq-a {
+      display: none; }
+      .faq-group > div.faq-a:before {
+        content: 'A'; }
