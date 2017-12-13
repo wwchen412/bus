@@ -69,13 +69,19 @@
         </nav>
     </header>
     <div id="wrap" class="index">
-        <!-- 首圖 -->
-        <div id="hero-img" class="mb-40">
-            <!-- 選擇上架影片或圖片 -->
-            <!-- 如果是圖片 -->
-            <img src="Content/img/heroImg.png" alt="">
-            <!-- 如果是影片 -->
-            <!-- <video src="Content/img/sample.mp4" autoplay muted loop></video> -->
+        <!-- 首圖 輪播-->
+        <div id="hero-img" class="mb-40 hero-img swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Content/img/heroImg.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Content/img/heroImg.png" alt="">
+                </div>
+
+            </div>
+
+
         </div>
         <!--  精選商品-->
         <div id="Commodity" class="">
@@ -95,7 +101,7 @@
                     </div>
                     <div class="bus-6 bus-sm-12">
                         <div class="commodity-list swiper-slider swiper-container">
-                            <div class="row swiper-wrapper" style="flex-wrap:nowrap">
+                            <ul class="row swiper-wrapper" style="flex-wrap:nowrap">
                                 <li class="bus-4 swiper-slide">
 
                                     <div class="commodity-list-block">
@@ -205,7 +211,7 @@
                                     </div>
                                 </li>
 
-                            </div>
+                            </ul>
                             <div class="swiper-pagination"></div>
 
 
@@ -381,6 +387,22 @@
     </script>
     <!-- <script src="content/js/slick.min.js"></script> -->
     <script>
+        // 精選商品
+        var swiper = new Swiper('.hero-img', {
+
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+            // ,
+            // pagination: {
+            //     el: '.hero-dots',
+            //     clickable: true
+            // },
+
+
+        });
         // 精選商品
         var swiper = new Swiper('.swiper-slider', {
             slidesPerView: 3,
