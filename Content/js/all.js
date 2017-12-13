@@ -1,7 +1,11 @@
 // header.js
+
+// 可直接刪除
 $('header').load('index.html header');
 $('footer').load('index.html footer');
+// end
 
+// 手機版展開選單
 $(window).bind("load", function() {
 
     $('.menu-btn').click(function() {
@@ -27,7 +31,8 @@ $('.faq-q').each(function() {
 
 // 精選逛品牌品牌選擇
 
-// 假資料
+// 假資料 之後改用ajaxload
+
 var brandlist = [{
     brandName: '點點心',
     brandLogo: 'Content/img/logo.png',
