@@ -144,28 +144,28 @@
         font-size: 0;
         li {
             display: inline-block;
-            width: calc(100% / 3 - 5px);
-            padding-bottom: calc(100% / 3 - 5px);
+            width: calc(100% / 3 - 20px);
+            padding-bottom: calc(100% / 3 - 20px);
             height: 0;
             box-sizing: border-box;
             overflow: hidden;
-            margin: 5px 0;
+            margin: 10px 0;
             position: relative;
             transition: .2s;
-            cursor: pointer;
+            box-shadow: 0 0 5px rgba(black,.5);            cursor: pointer;
             @include range-width(769px, 0) {
-                &:nth-child(3n+1) {
-                    margin: 5px 6.5px;
+                &:nth-child(3n+2) {
+                    margin: 10px 20px;
                 }
-                &:nth-child(1),
-                &:nth-child(2) {
-                    margin: 0;
-                    width: calc(100% / 2 - 5px);
-                    padding-bottom: calc(100% / 2 - 5px);
-                }
-                &:nth-child(2) {
-                    margin-left: 9px;
-                }
+                // &:nth-child(1),
+                // &:nth-child(2) {
+                //     margin: 0;
+                //     width: calc(100% / 2 - 5px);
+                //     padding-bottom: calc(100% / 2 - 5px);
+                // }
+                // &:nth-child(2) {
+                //     margin-left: 9px;
+                // }
             }
             &:hover {
                 .item {
