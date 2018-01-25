@@ -1,2 +1,211 @@
 .breadcrumb-trail {
-  padding: 30px 0 15px; }
+  padding: 30px 0 15px;
+  color: #c7c7c7; }
+  .breadcrumb-trail a {
+    color: #c7c7c7; }
+    .breadcrumb-trail a:hover, .breadcrumb-trail a:active, .breadcrumb-trail a:visited {
+      color: rgba(199, 199, 199, 0.8); }
+    .breadcrumb-trail a:after {
+      content: '>';
+      display: inline-block;
+      margin: 0 5px; }
+    .breadcrumb-trail a:last-child:after {
+      content: ''; }
+
+@media screen and (min-width: 769px) {
+  .bus-pr-20 {
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; } }
+
+.shop-info {
+  padding: 20px 0; }
+
+.num {
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
+  .num > * {
+    height: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1rem; }
+  .num .input-number {
+    padding: 0 5px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    border: 0;
+    pointer-events: none;
+    width: 40px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0; }
+    .num .input-number:focus {
+      outline-offset: 0; }
+  .num .input-number-decrement,
+  .num .input-number-increment {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40px;
+    line-height: 38px;
+    border: 1px solid #c7c7c7;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px; }
+    .num .input-number-decrement:active,
+    .num .input-number-increment:active {
+      background: #ddd; }
+
+.cart-btns {
+  font-size: 0;
+  margin: 15px 0; }
+  .cart-btns a,
+  .cart-btns button {
+    font-size: 1rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    display: inline-block;
+    width: calc(50% - 15px / 2); }
+    .cart-btns a:focus,
+    .cart-btns button:focus {
+      outline-offset: 0; }
+    .cart-btns a:nth-child(2),
+    .cart-btns button:nth-child(2) {
+      margin-left: 14px; }
+
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #fff; }
+  .btn:hover, .btn:visited, .btn:active {
+    color: #fff; }
+
+.btn-red {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#BC271A));
+  background: -webkit-linear-gradient(top, #e60012, #BC271A);
+  background: -o-linear-gradient(top, #e60012, #BC271A);
+  background: linear-gradient(to bottom, #e60012, #BC271A); }
+
+.btn-orange {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F09637), to(#EC5729));
+  background: -webkit-linear-gradient(top, #F09637, #EC5729);
+  background: -o-linear-gradient(top, #F09637, #EC5729);
+  background: linear-gradient(to bottom, #F09637, #EC5729); }
+
+.sales ul {
+  margin: 20px 0; }
+
+.sales li {
+  margin: 5px 0; }
+
+.sales h3 {
+  padding: 26px 0 15px; }
+
+.shop-textBlock img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.big-img {
+  margin-top: 30px; }
+
+.shop-itemsList ul {
+  padding: 5px 0;
+  font-size: 0; }
+  .shop-itemsList ul li {
+    display: inline-block;
+    width: calc((100% - 44px) / 3);
+    padding-bottom: calc((100% - 44px) / 3);
+    height: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 1px solid #fdfdfd;
+    border-radius: 2px; }
+    @media screen and (min-width: 769px) {
+      .shop-itemsList ul li:nth-child(3n+2) {
+        margin: 10px 20px; } }
+    .shop-itemsList ul li:hover .item {
+      top: 0;
+      left: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
+      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
+      background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)); }
+    .shop-itemsList ul li .item {
+      font-size: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      cursor: pointer; }
+      .shop-itemsList ul li .item img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover; }
+      .shop-itemsList ul li .item h2 {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #fff; }
+      .shop-itemsList ul li .item p {
+        padding: 5px 0; }
+      .shop-itemsList ul li .item small {
+        text-decoration: line-through;
+        margin-right: 10px; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .shop-itemsList ul li {
+        width: calc(100% / 2 - 5px);
+        padding-bottom: calc(100% / 2 - 5px); }
+        .shop-itemsList ul li:nth-child(2n) {
+          margin-left: 7.5px; }
+        .shop-itemsList ul li .item {
+          padding: 10px;
+          top: 0;
+          left: 0;
+          background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
+          background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
+          background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
+          background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)); } }

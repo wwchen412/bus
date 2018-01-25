@@ -568,9 +568,11 @@ footer {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    cursor: pointer; }
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 1px solid #fdfdfd;
+    border-radius: 2px; }
     @media screen and (min-width: 769px) {
       .shop-itemsList ul li:nth-child(3n+2) {
         margin: 10px 20px; } }
@@ -614,7 +616,8 @@ footer {
         object-fit: cover; }
       .shop-itemsList ul li .item h2 {
         padding-bottom: 5px;
-        border-bottom: 1px solid #fff; }
+        border-bottom: 1px solid #fff;
+        font-size: 1rem; }
       .shop-itemsList ul li .item p {
         padding: 5px 0; }
       .shop-itemsList ul li .item small {
