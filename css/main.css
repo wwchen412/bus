@@ -557,8 +557,8 @@ footer {
   font-size: 0; }
   .shop-itemsList ul li {
     display: inline-block;
-    width: calc(100% / 3 - 20px);
-    padding-bottom: calc(100% / 3 - 20px);
+    width: calc((100% - 44px) / 3);
+    padding-bottom: calc((100% - 44px) / 3);
     height: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -568,8 +568,8 @@ footer {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     cursor: pointer; }
     @media screen and (min-width: 769px) {
       .shop-itemsList ul li:nth-child(3n+2) {
