@@ -583,6 +583,14 @@ footer {
       background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
       background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
       background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)); }
+    .shop-itemsList ul li:hover img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+    .shop-itemsList ul li img {
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
     .shop-itemsList ul li .item {
       font-size: 1rem;
       position: absolute;
