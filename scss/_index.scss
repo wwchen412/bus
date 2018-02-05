@@ -28,6 +28,7 @@
                 height: 0;
                 padding-top: 100%;
                 position: relative;
+                border: 1px solid $bordercolor;
                 img {
                     position: absolute;
                     top: 0;
@@ -51,9 +52,15 @@
             &:nth-child(3n+3) {
                 .img-wrap:before {
                     @extend %img-tran;
-                    border-width: 30px 25px 0 25px;
-                    border-color: #ffffff transparent transparent transparent;
-                    top: 0;
+                   width: 50px;
+                        height: 25px;
+                         background-image: url('../content/img/tran.png');
+                        background-size:cover;
+                        border: 0;
+                        background-repeat: no-repeat;
+                        transform: rotate(180deg) translate(50%);
+                        
+                    top: -3px;
                     z-index: 1;
                 }
             }
@@ -64,9 +71,15 @@
                     order: 1;
                     &:before {
                         @extend %img-tran;
-                        border-width: 0px 25px 30px 25px;
-                        border-color: transparent transparent #ffffff transparent;
-                        bottom: 0;
+                    
+                        width: 50px;
+                        height: 25px;
+                         background-image: url('../content/img/tran.png');
+                         
+                        background-size:cover;
+                        border: 0;
+                        background-repeat: no-repeat;
+                        bottom: -3px;
                         z-index: 1;
                     }
                 }

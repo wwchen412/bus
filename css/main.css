@@ -170,7 +170,8 @@ header {
     width: 100%;
     height: 0;
     padding-top: 100%;
-    position: relative; }
+    position: relative;
+    border: 1px solid #c7c7c7; }
     #Commodity .commodity-list .bus-4 > * img {
       position: absolute;
       top: 0;
@@ -191,9 +192,16 @@ header {
     transform: translate(-50%, 0);
     left: 50%; }
   #Commodity .commodity-list .bus-4:nth-child(3n+1) .img-wrap:before, #Commodity .commodity-list .bus-4:nth-child(3n+3) .img-wrap:before {
-    border-width: 30px 25px 0 25px;
-    border-color: #ffffff transparent transparent transparent;
-    top: 0;
+    width: 50px;
+    height: 25px;
+    background-image: url("../content/img/tran.png");
+    background-size: cover;
+    border: 0;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(180deg) translate(50%);
+    -ms-transform: rotate(180deg) translate(50%);
+    transform: rotate(180deg) translate(50%);
+    top: -3px;
     z-index: 1; }
   #Commodity .commodity-list .bus-4:nth-child(3n+2) {
     display: -webkit-box;
@@ -206,9 +214,13 @@ header {
       -ms-flex-order: 1;
       order: 1; }
       #Commodity .commodity-list .bus-4:nth-child(3n+2) .img-wrap:before {
-        border-width: 0px 25px 30px 25px;
-        border-color: transparent transparent #ffffff transparent;
-        bottom: 0;
+        width: 50px;
+        height: 25px;
+        background-image: url("../content/img/tran.png");
+        background-size: cover;
+        border: 0;
+        background-repeat: no-repeat;
+        bottom: -3px;
         z-index: 1; }
     #Commodity .commodity-list .bus-4:nth-child(3n+2) .commodity-list-block {
       -webkit-box-ordinal-group: 3;
