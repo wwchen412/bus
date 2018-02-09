@@ -194,7 +194,7 @@ header {
   #Commodity .commodity-list .bus-4:nth-child(3n+1) .img-wrap:before, #Commodity .commodity-list .bus-4:nth-child(3n+3) .img-wrap:before {
     width: 50px;
     height: 25px;
-    background-image: url("../content/img/tran.png");
+    background-image: url("../img/tran.png");
     background-size: cover;
     border: 0;
     background-repeat: no-repeat;
@@ -216,7 +216,7 @@ header {
       #Commodity .commodity-list .bus-4:nth-child(3n+2) .img-wrap:before {
         width: 50px;
         height: 25px;
-        background-image: url("../content/img/tran.png");
+        background-image: url("../img/tran.png");
         background-size: cover;
         border: 0;
         background-repeat: no-repeat;
@@ -445,11 +445,11 @@ footer {
     .breadcrumb-trail a:hover, .breadcrumb-trail a:active, .breadcrumb-trail a:visited {
       color: rgba(199, 199, 199, 0.8); }
     .breadcrumb-trail a:after {
-      content: '>';
+      content: ">";
       display: inline-block;
       margin: 0 5px; }
     .breadcrumb-trail a:last-child:after {
-      content: ''; }
+      content: ""; }
 
 @media screen and (min-width: 769px) {
   .bus-pr-20 {
@@ -536,16 +536,16 @@ footer {
     color: #fff; }
 
 .btn-red {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#BC271A));
-  background: -webkit-linear-gradient(top, #e60012, #BC271A);
-  background: -o-linear-gradient(top, #e60012, #BC271A);
-  background: linear-gradient(to bottom, #e60012, #BC271A); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#bc271a));
+  background: -webkit-linear-gradient(top, #e60012, #bc271a);
+  background: -o-linear-gradient(top, #e60012, #bc271a);
+  background: linear-gradient(to bottom, #e60012, #bc271a); }
 
 .btn-orange {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F09637), to(#EC5729));
-  background: -webkit-linear-gradient(top, #F09637, #EC5729);
-  background: -o-linear-gradient(top, #F09637, #EC5729);
-  background: linear-gradient(to bottom, #F09637, #EC5729); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#f09637), to(#ec5729));
+  background: -webkit-linear-gradient(top, #f09637, #ec5729);
+  background: -o-linear-gradient(top, #f09637, #ec5729);
+  background: linear-gradient(to bottom, #f09637, #ec5729); }
 
 .sales ul {
   margin: 20px 0; }
@@ -570,47 +570,46 @@ footer {
   .shop-itemsList ul li {
     display: inline-block;
     width: calc((100% - 44px) / 3);
-    padding-bottom: calc((100% - 44px) / 3);
-    height: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    overflow: hidden;
     margin: 10px 0;
     position: relative;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
     cursor: pointer;
     border: 1px solid #fdfdfd;
     border-radius: 2px; }
+    .shop-itemsList ul li .img-wrap {
+      width: 100%;
+      -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding-bottom: 100%;
+      height: 0;
+      position: relative;
+      overflow: hidden; }
     @media screen and (min-width: 769px) {
-      .shop-itemsList ul li:nth-child(3n+2) {
+      .shop-itemsList ul li:nth-child(3n + 2) {
         margin: 10px 20px; } }
-    .shop-itemsList ul li:hover .item {
-      top: 0;
-      left: 0;
-      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
-      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
-      background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
-      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)); }
     .shop-itemsList ul li:hover img {
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
     .shop-itemsList ul li img {
-      -webkit-transition: .2s;
-      -o-transition: .2s;
-      transition: .2s; }
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
     .shop-itemsList ul li .item {
       font-size: 1rem;
-      position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       height: 100%;
-      color: #fff;
+      text-align: center;
       padding: 20px;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -626,9 +625,9 @@ footer {
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-transition: .2s;
-      -o-transition: .2s;
-      transition: .2s;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s;
       cursor: pointer; }
       .shop-itemsList ul li .item img {
         height: 100%;
@@ -636,27 +635,29 @@ footer {
         object-fit: cover; }
       .shop-itemsList ul li .item h2 {
         padding-bottom: 5px;
-        border-bottom: 1px solid #fff;
         font-size: 1rem; }
       .shop-itemsList ul li .item p {
-        padding: 5px 0; }
+        padding: 5px 0;
+        color: #f00; }
       .shop-itemsList ul li .item small {
         text-decoration: line-through;
-        margin-right: 10px; }
+        margin-right: 10px;
+        color: #c7c7c7; }
     @media screen and (max-width: 768px) and (min-width: 300px) {
       .shop-itemsList ul li {
-        width: calc(100% / 2 - 5px);
-        padding-bottom: calc(100% / 2 - 5px); }
+        width: calc(100% / 2 - 5px); }
         .shop-itemsList ul li:nth-child(2n) {
-          margin-left: 7.5px; }
-        .shop-itemsList ul li .item {
-          padding: 10px;
-          top: 0;
-          left: 0;
-          background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.7)));
-          background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
-          background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.7));
-          background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)); } }
+          margin-left: 7.5px; } }
+
+.brand-detail ul {
+  padding: 10px 0; }
+  .brand-detail ul li {
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .brand-detail ul li img {
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
 
 .cart-table {
   margin: 15px 0; }
@@ -968,6 +969,13 @@ footer {
 
 .history-form > div p {
   padding: 15px; }
+
+.termsArea {
+  padding: 25px;
+  background-color: #eee;
+  color: #808080; }
+  .termsArea p {
+    line-height: 180%; }
 
 @media screen and (max-width: 768px) and (min-width: 300px) {
   .faq-nav {

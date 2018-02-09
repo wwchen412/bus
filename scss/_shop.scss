@@ -1,236 +1,264 @@
-@import '_color.scss';
-@import '_mixin.scss';
+@import "_color.scss";
+@import "_mixin.scss";
 .breadcrumb-trail {
-    padding: 30px 0 15px;
+  padding: 30px 0 15px;
+  color: $bordercolor;
+  a {
     color: $bordercolor;
-    a {
-        color: $bordercolor;
-        &:hover,
-        &:active,
-        &:visited {
-            color: rgba($bordercolor, .8);
-        }
-        &:after {
-            content: '>';
-            display: inline-block;
-            margin: 0 5px;
-        }
-        &:last-child {
-            &:after {
-                content: '';
-            }
-        }
+    &:hover,
+    &:active,
+    &:visited {
+      color: rgba($bordercolor, 0.8);
     }
+    &:after {
+      content: ">";
+      display: inline-block;
+      margin: 0 5px;
+    }
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+  }
 }
 
 .bus-pr-20 {
-    @include range-width(769px, 0) {
-        padding-right: 20px;
-        box-sizing: border-box;
-    }
+  @include range-width(769px, 0) {
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
 }
 
 .shop-info {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .num {
-    align-self: flex-end;
-    &>* {
-        height: 40px;
-        user-select: none;
-        font-size: 1rem;
+  align-self: flex-end;
+  & > * {
+    height: 40px;
+    user-select: none;
+    font-size: 1rem;
+  }
+  .input-number {
+    padding: 0 5px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    border: 0;
+    pointer-events: none;
+    width: 40px;
+    @include custom_select;
+  }
+  .input-number-decrement,
+  .input-number-increment {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40px;
+    line-height: 38px;
+    border: 1px solid $bordercolor;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    &:active {
+      background: #ddd;
     }
-    .input-number {
-        padding: 0 5px;
-        vertical-align: top;
-        text-align: center;
-        outline: none;
-        border: 0;
-        pointer-events: none;
-        width: 40px;
-        @include custom_select;
-    }
-    .input-number-decrement,
-    .input-number-increment {
-        box-sizing: border-box;
-        display: inline-block;
-        width: 40px;
-        line-height: 38px;
-        border: 1px solid $bordercolor;
-        color: #444;
-        text-align: center;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 4px;
-        &:active {
-            background: #ddd;
-        }
-    }
+  }
 }
 
 .cart-btns {
-    font-size: 0;
-    margin: 15px 0;
-    a,
-    button {
-        font-size: 1rem;
-        @include custom_select;
-        display: inline-block;
-        width: calc(50% - 15px / 2);
-        &:nth-child(2) {
-            margin-left: 14px;
-        }
+  font-size: 0;
+  margin: 15px 0;
+  a,
+  button {
+    font-size: 1rem;
+    @include custom_select;
+    display: inline-block;
+    width: calc(50% - 15px / 2);
+    &:nth-child(2) {
+      margin-left: 14px;
     }
+  }
 }
 
 .btn {
-    display: inline-block;
-    padding: 15px 20px;
+  display: inline-block;
+  padding: 15px 20px;
+  color: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #fff;
+  &:hover,
+  &:visited,
+  &:active {
     color: #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-    border: 0;
-    cursor: pointer;
-    font-size: 1rem;
-    text-align: center;
-    background-color: #fff;
-    &:hover,
-    &:visited,
-    &:active {
-        color: #fff;
-    }
+  }
 }
 
 .btn-red {
-    background: linear-gradient(to bottom, $red, #BC271A);
+  background: linear-gradient(to bottom, $red, #bc271a);
 }
 
 .btn-orange {
-    background: linear-gradient(to bottom, #F09637, #EC5729);
+  background: linear-gradient(to bottom, #f09637, #ec5729);
 }
 
 // 最新優惠
 .sales {
-    ul {
-        margin: 20px 0;
-    }
-    li {
-        margin: 5px 0;
-    }
-    h3 {
-        padding: 26px 0 15px;
-    }
+  ul {
+    margin: 20px 0;
+  }
+  li {
+    margin: 5px 0;
+  }
+  h3 {
+    padding: 26px 0 15px;
+  }
 }
 
 // 商品圖文編輯器
 .shop-textBlock {
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 // 商品列表
 .big-img {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .shop-itemsList {
-    ul {
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-        padding: 5px 0;
-        font-size: 0;
-        li {
-            display: inline-block;
-            width: calc((100% - 44px) / 3);
-            padding-bottom:calc((100% - 44px) / 3);
-            height: 0;
-            box-sizing: border-box;
-            overflow: hidden;
-            margin: 10px 0;
-            position: relative;
-            transition: .2s;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            border: 1px solid #fdfdfd;
-            border-radius: 2px;
-            @include range-width(769px, 0) {
-                &:nth-child(3n+2) {
-                    margin: 10px 20px;
-                }
-                // &:nth-child(1),
-                // &:nth-child(2) {
-                //     margin: 0;
-                //     width: calc(100% / 2 - 5px);
-                //     padding-bottom: calc(100% / 2 - 5px);
-                // }
-                // &:nth-child(2) {
-                //     margin-left: 9px;
-                // }
-            }
-            &:hover {
-                .item {
-                    top: 0;
-                    left: 0;
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
-                }
-                img{
-                    transform: scale(1.1);
-                }
-            }
-            img{
-                transition: .2s;
-            }
-            .item {
-                font-size: 1rem;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                color: #fff;
-                padding: 20px;
-                box-sizing: border-box;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                justify-content: flex-end;
-                transition: .2s;
-                cursor: pointer;
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                }
-                h2 {
-                    padding-bottom: 5px;
-                    border-bottom: 1px solid #fff;
-                    font-size: 1rem;
-                }
-                p {
-                    padding: 5px 0;
-                }
-                small {
-                    text-decoration: line-through;
-                    margin-right: 10px;
-                }
-            }
-            @include range-width(300px, 768px) {
-                width: calc(100% / 2 - 5px);
-                padding-bottom: calc(100% / 2 - 5px);
-                &:nth-child(2n) {
-                    margin-left: 7.5px;
-                }
-                .item {
-                    padding: 10px;
-                    top: 0;
-                    left: 0;
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
-                }
-            }
+  ul {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0;
+    li {
+      display: inline-block;
+      width: calc((100% - 44px) / 3);
+     
+    //   height: 0;
+      box-sizing: border-box;
+     
+      margin: 10px 0;
+      position: relative;
+      transition: 0.2s;
+    //   
+      cursor: pointer;
+      border: 1px solid #fdfdfd;
+      border-radius: 2px;
+      .img-wrap{
+          width: 100%;
+        // padding-bottom: calc((100% - 44px) / 3);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        padding-bottom: 100%;
+        height: 0;
+        position: relative;
+         overflow: hidden;
+      }
+      @include range-width(769px, 0) {
+        &:nth-child(3n + 2) {
+          margin: 10px 20px;
         }
+        // &:nth-child(1),
+        // &:nth-child(2) {
+        //     margin: 0;
+        //     width: calc(100% / 2 - 5px);
+        //     padding-bottom: calc(100% / 2 - 5px);
+        // }
+        // &:nth-child(2) {
+        //     margin-left: 9px;
+        // }
+      }
+      &:hover {
+        // .item {
+        //   top: 0;
+        //   left: 0;
+        //   background: linear-gradient(
+        //     to bottom,
+        //     rgba(0, 0, 0, 0),
+        //     rgba(0, 0, 0, 0.7)
+        //   );
+        // }
+        img {
+          transform: scale(1.1);
+        }
+      }
+      img {
+        transition: 0.2s;
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+      }
+      .item {
+        font-size: 1rem;
+        // position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // color: #fff;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 0.2s;
+        cursor: pointer;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+        h2 {
+          padding-bottom: 5px;
+         
+          font-size: 1rem;
+        }
+        p {
+          padding: 5px 0;
+          color:#f00;
+        }
+        small {
+          text-decoration: line-through;
+          margin-right: 10px;
+          color:$bordercolor;
+        }
+      }
+      @include range-width(300px, 768px) {
+        width: calc(100% / 2 - 5px);
+        // padding-bottom: calc(100% / 2 - 5px);
+        &:nth-child(2n) {
+          margin-left: 7.5px;
+        }
+        
+      }
     }
+  }
+}
+
+// 品牌內容分類業
+.brand-detail {
+  ul {
+    padding: 10px 0;
+    li {
+      padding: 10px;
+      box-sizing: border-box;
+      img {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
 }
