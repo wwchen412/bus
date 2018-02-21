@@ -3,6 +3,7 @@
     .commodity-block {
         position: relative;
         height: 100%;
+        overflow: hidden;
         .commodity-title {
             color: #fff;
             position: absolute;
@@ -29,7 +30,8 @@
                 padding-top: 100%;
                 position: relative;
                 border: 1px solid $bordercolor;
-                img {
+                overflow: hidden;
+                img ,video{
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -37,6 +39,7 @@
                     height: 100%;
                     object-fit: cover;
                 }
+                
             }
             %img-tran {
                 content: '';
@@ -50,38 +53,38 @@
             }
             &:nth-child(3n+1),
             &:nth-child(3n+3) {
-                .img-wrap:before {
-                    @extend %img-tran;
-                   width: 50px;
-                        height: 25px;
-                         background-image: url('../img/tran.png');
-                        background-size:cover;
-                        border: 0;
-                        background-repeat: no-repeat;
-                        transform: rotate(180deg) translate(50%);
+                // .img-wrap:before {
+                //     @extend %img-tran;
+                //    width: 50px;
+                //         height: 25px;
+                //          background-image: url('../img/tran.png');
+                //         background-size:cover;
+                //         border: 0;
+                //         background-repeat: no-repeat;
+                //         transform: rotate(180deg) translate(50%);
                         
-                    top: -3px;
-                    z-index: 1;
-                }
+                //     top: -3px;
+                //     z-index: 1;
+                // }
             }
             &:nth-child(3n+2) {
                 display: flex;
                 flex-wrap: wrap;
                 .img-wrap {
                     order: 1;
-                    &:before {
-                        @extend %img-tran;
+                    // &:before {
+                    //     @extend %img-tran;
                     
-                        width: 50px;
-                        height: 25px;
-                         background-image: url('../img/tran.png');
+                    //     width: 50px;
+                    //     height: 25px;
+                    //      background-image: url('../img/tran.png');
                          
-                        background-size:cover;
-                        border: 0;
-                        background-repeat: no-repeat;
-                        bottom: -3px;
-                        z-index: 1;
-                    }
+                    //     background-size:cover;
+                    //     border: 0;
+                    //     background-repeat: no-repeat;
+                    //     bottom: -3px;
+                    //     z-index: 1;
+                    // }
                 }
                 .commodity-list-block {
                     order: 2;
@@ -140,7 +143,7 @@
             display: inline-block;
             width: calc(100% / 4);
             font-size: 0;
-            img {
+            img ,video{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -156,6 +159,7 @@
             @include range-width(300px, 768px) {
                 width: calc(100% / 2);
             }
+            overflow: hidden;
         }
     }
 }

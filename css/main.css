@@ -147,7 +147,8 @@ header {
 
 #Commodity .commodity-block {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
   #Commodity .commodity-block .commodity-title {
     color: #fff;
     position: absolute;
@@ -171,8 +172,9 @@ header {
     height: 0;
     padding-top: 100%;
     position: relative;
-    border: 1px solid #c7c7c7; }
-    #Commodity .commodity-list .bus-4 > * img {
+    border: 1px solid #c7c7c7;
+    overflow: hidden; }
+    #Commodity .commodity-list .bus-4 > * img, #Commodity .commodity-list .bus-4 > * video {
       position: absolute;
       top: 0;
       left: 0;
@@ -180,29 +182,6 @@ header {
       height: 100%;
       -o-object-fit: cover;
       object-fit: cover; }
-  #Commodity .commodity-list .bus-4:nth-child(3n+1) .img-wrap:before, #Commodity .commodity-list .bus-4:nth-child(3n+3) .img-wrap:before, #Commodity .commodity-list .bus-4:nth-child(3n+2) .img-wrap:before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    left: 50%; }
-  #Commodity .commodity-list .bus-4:nth-child(3n+1) .img-wrap:before, #Commodity .commodity-list .bus-4:nth-child(3n+3) .img-wrap:before {
-    width: 50px;
-    height: 25px;
-    background-image: url("../img/tran.png");
-    background-size: cover;
-    border: 0;
-    background-repeat: no-repeat;
-    -webkit-transform: rotate(180deg) translate(50%);
-    -ms-transform: rotate(180deg) translate(50%);
-    transform: rotate(180deg) translate(50%);
-    top: -3px;
-    z-index: 1; }
   #Commodity .commodity-list .bus-4:nth-child(3n+2) {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -213,15 +192,6 @@ header {
       -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
       order: 1; }
-      #Commodity .commodity-list .bus-4:nth-child(3n+2) .img-wrap:before {
-        width: 50px;
-        height: 25px;
-        background-image: url("../img/tran.png");
-        background-size: cover;
-        border: 0;
-        background-repeat: no-repeat;
-        bottom: -3px;
-        z-index: 1; }
     #Commodity .commodity-list .bus-4:nth-child(3n+2) .commodity-list-block {
       -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -274,8 +244,9 @@ header {
     display: inline-block;
     width: calc(100% / 4);
     font-size: 0; }
-    .small-banner ul li img,
-    .bottom-banner ul li img {
+    .small-banner ul li img, .small-banner ul li video,
+    .bottom-banner ul li img,
+    .bottom-banner ul li video {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
@@ -284,9 +255,11 @@ header {
 .bottom-banner ul {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  @media screen and (max-width: 768px) and (min-width: 300px) {
-    .bottom-banner ul li {
-      width: calc(100% / 2); } }
+  .bottom-banner ul li {
+    overflow: hidden; }
+    @media screen and (max-width: 768px) and (min-width: 300px) {
+      .bottom-banner ul li {
+        width: calc(100% / 2); } }
 
 .brand .brand-select {
   padding: 15px;
@@ -951,7 +924,7 @@ footer {
 
 .history-form .content .blockgroup p {
   border-bottom: 2px solid #E5E5E5; }
-  .history-form .content .blockgroup p:last-child {
+  .history-form .content .blockgroup p:last-child() {
     border-bottom: 0; }
 
 .history-form .content .blockgroup span {
@@ -1095,6 +1068,12 @@ footer {
 
 body {
   font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif; }
+
+video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 a {
   color: #000000;
@@ -1249,7 +1228,11 @@ b {
   flex-direction: column; }
 
 #hero-img {
+  max-height: 50vh;
   margin-bottom: 40px; }
+  @media screen and (max-width: 768px) and (min-width: 300px) {
+    #hero-img {
+      max-height: 30vh; } }
   #hero-img img,
   #hero-img video {
     display: block;

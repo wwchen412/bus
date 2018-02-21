@@ -38,7 +38,7 @@ var brandlist = [{
     brandLogo: 'Content/img/logo.png',
     brandLink: 'shop.html',
     shopBanner: [
-        'Content/img/brand-img2.png',
+        'Content/img/123.mp4',
         'Content/img/brand-img2.png',
         'Content/img/brand-img3.png',
         'Content/img/brand-img2.png'
@@ -124,8 +124,8 @@ var brandlist = [{
         'Content/img/brand-img.png'
     ]
 }, {
-    brandName: '無印良品',
-    brandLogo: 'Content/img/logo-8.png',
+    brandName: '無印良品6',
+    brandLogo: 'Content/img/logo-6.png',
     brandLink: 'shop.html',
     shopBanner: [
         'Content/img/brand-img.png',
@@ -138,7 +138,7 @@ var brandlist = [{
 var brand = document.querySelectorAll('.brand-slick li');
 
 for (var i = 0; i < brand.length; i++) {
-
+    
     brand[i].innerHTML = '<img src="' + brandlist[i].brandLogo + '" alt="' + brandlist[i].brandName + '" class="img-fluid ">';
     brand[i].addEventListener('click', brandSelect, false);
 
@@ -152,8 +152,15 @@ function brandSelect() {
     for (var a = 0; a < brandItems.length; a++) {
         var bImg = brandlist[index].shopBanner[a];
         var bLink = brandlist[index].brandLink;
-        console.log(bLink);
-        brandItems[a].innerHTML = '<a href="' + bLink + '"><img src="' + bImg + '" alt="" class="img-fluid "></a>';
+        var type = bImg.split(".")[1];
+        var videoType = "mp4" || "mpeg" || "flv" || "3gp";
+        
+        if (type == videoType) {
+          brandItems[a].innerHTML = '<a href="' + bLink + '"><video src="' + bImg + '" alt="" loop autoplay muted></a>';
+        } else {
+          brandItems[a].innerHTML = '<a href="' + bLink + '"><img src="' + bImg + '" alt="" class="img-fluid "></a>';
+        }
+        
     }
 };
 
