@@ -156,7 +156,7 @@ function brandSelect() {
         var videoType = "mp4" || "mpeg" || "flv" || "3gp";
         
         if (type == videoType) {
-          brandItems[a].innerHTML = '<a href="' + bLink + '"><video src="' + bImg + '" alt="" loop autoplay muted></a>';
+          brandItems[a].innerHTML = '<a href="' + bLink + '"><video src="' + bImg + '" alt="" loop autoplay muted playsinline></a>';
         } else {
           brandItems[a].innerHTML = '<a href="' + bLink + '"><img src="' + bImg + '" alt="" class="img-fluid "></a>';
         }
