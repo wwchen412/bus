@@ -1,240 +1,245 @@
-@import '_mixin.scss';
-@import '_color.scss';
-@import '_header.scss'; // header共用
-@import '_index.scss'; // 首頁
-@import '_footer.scss'; //footer 共用
-@import '_grid.scss'; //masonry style gird
-@import '_shop.scss';
-@import '_cart.scss';
-@import '_member.scss';
-@import '_faq.scss';
-@import '_login.scss';
+@import "_mixin.scss";
+@import "_color.scss";
+@import "_header.scss"; // header共用
+@import "_index.scss"; // 首頁
+@import "_footer.scss"; //footer 共用
+@import "_grid.scss"; //masonry style gird
+@import "_shop.scss";
+@import "_cart.scss";
+@import "_member.scss";
+@import "_faq.scss";
+@import "_login.scss";
 * {
-    // outline: 1px solid #f00;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    letter-spacing: 1px;
-    font-weight: 400;
+  // outline: 1px solid #f00;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif;
-}
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體,
+    "Microsoft JhengHei", sans-serif;
 }
 
 a {
-    color: #000000;
-    text-decoration: none;
-    &:hover,
-    &:active,
-    &:visited {
-        color: rgba(#000, .8);
-    }
+  color: #000000;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:visited {
+    color: rgba(#000, 0.8);
+  }
 }
 
 b {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bus-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .bus-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 .bus-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 
 .bus-8 {
-    flex: 0 0 66.666666%;
-    max-width: 66.666666%;
+  flex: 0 0 66.666666%;
+  max-width: 66.666666%;
 }
-
+.bus-1{
+    flex: 0 0 100%;
+    height: 100%;
+    max-width: 100%;
+}
 .bus-4 {
-    flex: 0 0 33.3333333%;
-    max-width: 33.333333%;
+  flex: 0 0 33.3333333%;
+  max-width: 33.333333%;
 }
 
 .bus-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 
 .bus-sm-12 {
-    @include range-width(300px, 768px) {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+  @include range-width(300px, 768px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .bus-sm-px {
-    @include range-width(300px, 768px) {
-        padding: 0 5px;
-        box-sizing: border-box;
-    }
+  @include range-width(300px, 768px) {
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
 }
 
 .bus-sm-4 {
-    @include range-width(300px, 768px) {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
+  @include range-width(300px, 768px) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 
 .bus-sm-6 {
-    @include range-width(300px, 768px) {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+  @include range-width(300px, 768px) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 .d-sm-none {
-    @include range-width(300px, 768px) {
-        display: none !important;
-    }
+  @include range-width(300px, 768px) {
+    display: none !important;
+  }
 }
 
 .d-xs-none {
-    @include range-width(300px, 576px) {
-        display: none !important;
-    }
+  @include range-width(300px, 576px) {
+    display: none !important;
+  }
 }
 
 .bus-xs-6 {
-    @include range-width(300px, 576px) {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+  @include range-width(300px, 576px) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 .d-md-none {
-    @include range-width(768px, 0) {
-        display: none !important;
-    }
+  @include range-width(768px, 0) {
+    display: none !important;
+  }
 }
 
 .mb {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-40 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .py-1 {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .img-fluid {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
+}
+video.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .container-mini {
-    max-width: 575px;
-    margin: 0 auto;
+  max-width: 575px;
+  margin: 0 auto;
 }
 
 .d-flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .align-items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .flex-cloumn {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 // heroimg
 #hero-img {
-    max-height: 50vh;
-    @include range-width(300px,768px){
-        max-height: 30vh;
-    }
-    img,
-    video {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    margin-bottom: 40px;
-    // height: 100vh;
+  max-height: 50vh;
+  @include range-width(300px, 768px) {
+    max-height: 30vh;
+  }
+  img,
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  margin-bottom: 40px;
+  // height: 100vh;
 }
 
 #wrap {
-    &.index {
-        @include range-width(769px, 0) {
-            margin-top: 0;
-        }
+  &.index {
+    @include range-width(769px, 0) {
+      margin-top: 0;
     }
-    margin-top: 50px;
-    min-height: calc(100vh - 185px);
-    @include range-width(300px, 768px) {
-        margin-top: 110px;
-    }
+  }
+  margin-top: 50px;
+  min-height: calc(100vh - 185px);
+  @include range-width(300px, 768px) {
+    margin-top: 110px;
+  }
 }
 
 .border-bottom {
-    border-bottom: 1px solid $bordercolor;
+  border-bottom: 1px solid $bordercolor;
 }
 
 .line-height-180 {
-    line-height: 180%;
+  line-height: 180%;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-xs-center {
-    @include range-width(300px, 768px) {
-        text-align: center;
-    }
+  @include range-width(300px, 768px) {
+    text-align: center;
+  }
 }
 
 .text-xs-left {
-    @include range-width(300px, 768px) {
-        text-align: left;
-    }
+  @include range-width(300px, 768px) {
+    text-align: left;
+  }
 }
 
 // input
@@ -245,63 +250,63 @@ input[type="password"],
 input[type="date"],
 select,
 textarea {
-    &.error {
-        border-color: #C0281B;
-        outline-color: #C0281B !important;
-    }
-    @include custom_select;
-    background-color: #fff;
-    font-size: 1rem;
-    padding: 10px;
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    border: 1px solid $bordercolor;
-    border-radius: 4px;
-    &:focus {
-        outline-color: #3B89DA;
-        outline-offset: -3px;
-        outline-width: 1px;
-    }
+  &.error {
+    border-color: #c0281b;
+    outline-color: #c0281b !important;
+  }
+  @include custom_select;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $bordercolor;
+  border-radius: 4px;
+  &:focus {
+    outline-color: #3b89da;
+    outline-offset: -3px;
+    outline-width: 1px;
+  }
 }
 
 input[type="radio"] {
-    &.error {
-        &+.label-block {
-            background: rgba(255, 0, 0, 0.2);
-            border: 1px solid #C0281B;
-            box-sizing: border-box;
-        }
+  &.error {
+    & + .label-block {
+      background: rgba(255, 0, 0, 0.2);
+      border: 1px solid #c0281b;
+      box-sizing: border-box;
     }
+  }
 }
 
 .select-wrap {
-    display: inline-block;
-    position: relative;
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 16px;
-        width: 0;
-        height: 0;
-        pointer-events: none;
-        border-style: solid;
-        border-width: 10px 10px 0 10px;
-        border-color: #c7c7c7 transparent transparent transparent;
-    }
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #c7c7c7 transparent transparent transparent;
+  }
 }
 
 select {
-    appearance: listbox;
-    position: relative;
+  appearance: listbox;
+  position: relative;
 }
 
 .input-group {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .fb_iframe_widget {
-    display: block !important;
+  display: block !important;
 }
