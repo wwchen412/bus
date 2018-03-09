@@ -1,152 +1,162 @@
-@import '_mixin.scss'; // 首頁header
+@import "_mixin.scss"; // 首頁header
 header {
-    background-color: rgba(#fff, .8);
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 90;
-    width: 100%;
+  background-color: rgba(#fff, 0.8);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  @include range-width(300px, 768px) {
+    height: auto;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // align-items: center;
+    // margin: 0 15px;
+    border-bottom: 1px solid $bordercolor;
     @include range-width(300px, 768px) {
-        height: auto;
+      margin: 0;
     }
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        // align-items: center;
-        // margin: 0 15px;
-        border-bottom: 1px solid $bordercolor;
+    & > div {
+      padding: 10px 0;
+      align-self: stretch;
+    }
+  }
+  .logo {
+    padding: 0 15px;
+    background-color: rgba(#fff, 0.5);
+    display: flex;
+    align-items: center;
+    @include range-width(300px, 768px) {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      background-color: rgba(#fff, 1);
+    }
+    img {
+      width: 150px;
+      max-height: 25px;
+      align-self: center;
+    }
+  }
+  .menu {
+    // @include range-width(300px, 768px) {
+    //     width: 100%;
+    //     text-align: center;
+    // }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    @include range-width(300px, 768px) {
+      order: 2;
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
+  }
+  .icon-btns {
+    height: 30px;
+    vertical-align: middle;
+    background-color: rgba(#fff, 0.5);
+    @include range-width(300px, 768px) {
+      order: 1;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(#fff, 1);
+    }
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      position: relative;
+      &:nth-child(2) {
+        border-left: 1px solid $maincolor;
+        border-right: 1px solid $maincolor;
         @include range-width(300px, 768px) {
-            margin: 0;
+          border: none;
         }
-        &>div {
-            padding: 10px 0;
-            align-self: stretch;
-        }
+      }
+      &:hover .tip {
+        display: inline-block;
+      }
     }
-    .logo {
-        padding: 0 15px;
-        background-color: rgba(#fff, .5);
-        display: flex;
-        align-items: center;
-        @include range-width(300px, 768px) {
-            padding: 15px 0;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            background-color: rgba(#fff, 1);
-        }
-        img {
-            width: 150px;
-            max-height: 25px;
-            align-self: center;
-        }
+    img,
+    svg {
+      width: 25px;
+      display: inline-block;
+      vertical-align: middle;
     }
-    .menu {
-        // @include range-width(300px, 768px) {
-        //     width: 100%;
-        //     text-align: center;
-        // }
-        li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        @include range-width(300px, 768px) {
-            order: 2;
-            text-align: center;
-            width: 100%;
-            display: none;
-        }
+    svg {
+      fill: $maincolor;
+      &.active-menu {
+        fill: #2b357f;
+      }
     }
-    .icon-btns {
-        height: 30px;
-        vertical-align: middle;
-        background-color: rgba(#fff, .5);
-        @include range-width(300px, 768px) {
-            order: 1;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(#fff, 1);
-        }
-        li {
-            display: inline-block;
-            padding: 0 10px;
-            position: relative;
-            &:nth-child(2) {
-                border-left: 1px solid $maincolor;
-                border-right: 1px solid $maincolor;
-                @include range-width(300px, 768px) {
-                    border: none;
-                }
-            }
-            &:hover .tip {
-                display: inline-block;
-            }
-        }
-        img,
-        svg {
-            width: 25px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        svg {
-            fill: $maincolor;
-            &.active-menu {
-                fill: #2B357F;
-            }
-        }
-        .cart-num {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            padding: 3px;
-            font-size: .9rem;
-            color: #fff;
-            text-align: center;
-            background-color: #C0281B;
-            vertical-align: middle;
-            border-radius: 50%;
-        }
+    .cart-num {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      padding: 3px;
+      font-size: 0.9rem;
+      color: #fff;
+      text-align: center;
+      background-color: #c0281b;
+      vertical-align: middle;
+      border-radius: 50%;
+      line-height: 20px;
+      @include range-width(300px, 768px) {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-10px) scale(0.8);
+        line-height: 15px;
+      }
     }
+  }
 }
 
 .tip {
-    display: none;
+  display: none;
+  position: absolute;
+  padding: 5px 10px;
+  left: -50px;
+  top: -2px;
+  background-color: rgba(#fff, 1);
+  border: 1px solid #808080;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  word-break: keep-all;
+  @include range-width(300px, 768px) {
+    display: none !important;
+  }
+  &:before {
+    content: "";
+    border-width: 5px;
     position: absolute;
-    padding: 5px 10px;
-    left: -50px;
-    top: -2px;
-    background-color: rgba(#fff, 1);
-    border: 1px solid #808080;
-    border-radius: 4px;
-    transform: translateX(-50%);
-    word-break: keep-all;
-    @include range-width(300px, 768px) {
-        display: none !important;
-    }
-    &:before {
-        content: "";
-        border-width: 5px;
-        position: absolute;
-        display: block;
-        border-color: transparent;
-        border-style: solid;
-        right: -6px;
-        border-left-color: #808080;
-        margin-top: 7px;
-        border-right-width: 0;
-    }
-    &:after {
-        content: "";
-        border-width: 5px;
-        position: absolute;
-        display: block;
-        border-color: transparent;
-        border-style: solid;
-        right: -5px;
-        border-left-color: #fff;
-        margin-top: -15px;
-        border-right-width: 0;
-    }
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    right: -6px;
+    border-left-color: #808080;
+    margin-top: 7px;
+    border-right-width: 0;
+  }
+  &:after {
+    content: "";
+    border-width: 5px;
+    position: absolute;
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    right: -5px;
+    border-left-color: #fff;
+    margin-top: -15px;
+    border-right-width: 0;
+  }
 }

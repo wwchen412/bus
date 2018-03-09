@@ -16,6 +16,9 @@
   list-style: none;
   letter-spacing: 1px;
   font-weight: 400;
+  @include range-width(320px,768px){
+    font-size: 12px;
+  }
 }
 
 body {
@@ -50,6 +53,11 @@ b {
 .bus-6 {
   flex: 0 0 50%;
   max-width: 50%;
+  &.bus-6-1{
+    flex:0 0 100%;
+    max-width: 100%;
+    height: 100% !important; 
+  }
 }
 
 .bus-9 {
@@ -191,15 +199,18 @@ video.img-fluid {
 // heroimg
 #hero-img {
   max-height: 50vh;
-  @include range-width(300px, 768px) {
-    max-height: 30vh;
-  }
+  // @include range-width(300px, 768px) {
+  //   max-height: 30vh;
+  // }
   img,
   video {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+     @include range-width(769px, 0) {
+      height:50vh;
+    }
   }
   margin-bottom: 40px;
   // height: 100vh;

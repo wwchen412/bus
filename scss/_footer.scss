@@ -29,6 +29,9 @@ footer {
     .contact {
         p {
             display: inline-block;
+            img{
+                vertical-align: text-top;
+            }
         }
     }
     .footer-nav {
