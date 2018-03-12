@@ -90,17 +90,28 @@
         width: 100%;
         transform: translate(-50%, -50%);
         word-wrap: break-word;
-        word-break:break-all;
+        word-break: break-all;
         hr {
           border: 0;
           height: 0;
-          border-bottom:1px solid #000;
+          border-bottom: 1px solid #000;
           max-width: 50px;
           margin: auto;
         }
         h3 {
           padding: 0 15px;
-          padding-bottom: 10px;
+          margin-bottom: 10px;
+          // padding-bottom: 10px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          display: -moz-box;  
+          -moz-line-clamp: 3;
+          -moz-box-orient: vertical;
+          display: box;
+          line-clamp: 3;
+          box-orient: vertical;
+          overflow: hidden;
           // border-bottom: 1px solid #000;
         }
         h2 {

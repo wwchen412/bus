@@ -247,7 +247,17 @@ header {
         margin: auto; }
       #Commodity .commodity-list .commodity-list-block .commodity-list-blockinner h3 {
         padding: 0 15px;
-        padding-bottom: 10px; }
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -moz-box;
+        -moz-line-clamp: 3;
+        -moz-box-orient: vertical;
+        display: box;
+        line-clamp: 3;
+        box-orient: vertical;
+        overflow: hidden; }
       #Commodity .commodity-list .commodity-list-block .commodity-list-blockinner h2 {
         padding: 10px 0;
         color: #f00; }
@@ -579,6 +589,9 @@ footer {
 
 .sales h3 {
   padding: 26px 0 15px; }
+
+.info-text-block ul, .info-text-block ol {
+  padding-left: 20px; }
 
 .info-text-block li {
   list-style: initial; }
@@ -1151,12 +1164,12 @@ footer {
   list-style: none;
   letter-spacing: 1px;
   font-weight: 400; }
-  @media screen and (max-width: 768px) and (min-width: 320px) {
-    * {
-      font-size: 12px; } }
 
 body {
   font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體, "Microsoft JhengHei", sans-serif; }
+  @media screen and (max-width: 768px) and (min-width: 320px) {
+    body {
+      font-size: 12px; } }
 
 a {
   color: #000000;

@@ -16,14 +16,15 @@
   list-style: none;
   letter-spacing: 1px;
   font-weight: 400;
-  @include range-width(320px,768px){
-    font-size: 12px;
-  }
+ 
 }
 
 body {
   font-family: "Helvetica Neue", Helvetica, "PingFang TC", Arial, 微軟正黑體,
     "Microsoft JhengHei", sans-serif;
+     @include range-width(320px,768px){
+    font-size: 12px;
+  }
 }
 
 a {

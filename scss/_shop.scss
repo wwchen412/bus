@@ -123,6 +123,9 @@
   }
 }
 .info-text-block{
+  ul,ol{
+    padding-left:20px;
+  }
   li{
     list-style: initial;
   }
